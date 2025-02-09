@@ -3,6 +3,5 @@
     <HomeHero />
     <HomeServices />
     <HomeContact />
-    <HomeFooter />
   </div>
 </template>
