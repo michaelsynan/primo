@@ -12,7 +12,7 @@ defineProps({
     <img class="w-12" :src="icon" :alt="header" />
     <div>
       <h3 class="caslon text-2xl py-2">{{ header }}</h3>
-      <p class="roboto leading-loose">{{ description }}</p>
+      <p class="roboto leading-loose text-stone-300">{{ description }}</p>
     </div>
     <div class="text-right">
       <NuxtLink :to="link" class="text-sm">Learn More →</NuxtLink>

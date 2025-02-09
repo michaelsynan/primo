@@ -4,19 +4,19 @@ const servicesData = [
     icon: '/wrench.svg',
     header: 'Diagnosis & Inspection',
     description: 'Our technicians fully inspect and properly diagnose your issue at low cost with professionalism & enthusiasm for all your clogs, leaks, and repairs!',
-    link: '/diagnosis-inspection'
+    link: '/sewer-diagnosis-inspection'
   },
   {
     icon: '/camera.svg',
     header: 'Video Camera Pipe Inspection',
     description: 'Specially Designed Cameras allows technicians to conduct a visual inspection of your sewer line and other underground pipes to detect breaks and blockages.',
-    link: '/video-camera-pipe-inspection'
+    link: '/plumbing-video-camera-pipe-inspection'
   },
   {
     icon: '/pipe.svg',
     header: 'Sewer & Drain Cleaning & Repairs',
     description: 'Have your line cleaned to remove roots and clogs before a messy backup occurs. We will fix all your internal & external underground pipe repairs caused by cracks and corrosion.',
-    link: '/sewer-drain-cleaning-repairs'
+    link: '/sewer-drain-cleaning-repair'
   },
   {
     icon: '/faucet.svg',
@@ -43,12 +43,12 @@ const servicesData = [
   <div class="border-b w-full py-32 flex flex-col gap-10 px-4 md:px-0">
 
     <div :style="{ backgroundImage: 'url(/plumber.jpg)' }"
-      class="border border-primoGrey w-full max-w-6xl mx-auto flex justify-center items-center h-[400px] bg-cover rounded relative">
+      class="border border-primoGrey w-full max-w-5xl mx-auto flex justify-center items-center h-[400px] bg-cover rounded relative">
       <div class="overlay"></div> <!-- Overlay for dim effect -->
       <h2 class="caslon text-4xl z-10 relative">Our Services</h2>
     </div>
 
-    <div class="grid md:grid-cols-2 grid-cols-1 gap-8 max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-8 max-w-5xl mx-auto">
       <HomeService v-for="service in servicesData" :key="service.header" :icon="service.icon" :header="service.header"
         :description="service.description" :link="service.link"
         class="bg-stone-900/50 p-8 rounded-md border-primoGrey border" />

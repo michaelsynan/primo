@@ -8,7 +8,7 @@
         <input type="email" class="w-full mt-1" />
       </label>
       <label class="text-sm block">Message
-        <textarea class="w-full mt-1"></textarea>
+        <textarea class="w-full mt-1" rows="6"></textarea>
       </label>
       <SharedButton text="Submit" type="submit" class="min-w-content">Submit</SharedButton>
     </form>
