@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --font-sans: "Public Sans", sans-serif;
+  --color-primoGreen: #008c45;
+  --color-primoYellow: #fbcd00;
+  --color-primoRed: #c80815;
+  --color-primoWhite: #fffbef;
+  --color-primoBlack: #252525;
+  --color-primoBrown: #5c4033;
+  --color-primoGrey: #707070;
+}
+
+@layer base {
+  body {
+    @apply bg-stone-950 text-white;
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+  .text-highlight {
+    @apply text-yellow-300;
+  }
+}
+
+.roboto {
+  font-family: Roboto, sans-serif;
+}
+
+.roboto-condensed {
+  font-family: "Roboto Condensed", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.caslon {
+  font-family: "Libre Caslon Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
