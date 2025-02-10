@@ -1,7 +1,9 @@
 <template>
   <UApp>
     <SharedNav class="fixed w-full shared-nav" :class="{ 'nav-hidden': !showNavbar }" />
-    <NuxtPage />
+    <Transition name="page" mode="out-in">
+      <NuxtPage />
+    </Transition>
     <SharedFooter />
   </UApp>
 </template>
@@ -41,6 +43,20 @@ onUnmounted(() => {
 
 .nav-hidden {
   transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Page transition styles */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+
+.page-enter,
+.page-leave-to
+
+/* Starting and ending state for the leave */
+  {
   opacity: 0;
 }
 </style>
