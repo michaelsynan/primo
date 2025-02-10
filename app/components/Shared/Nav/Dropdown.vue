@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
+  <div class="rounded-bl">
     <ul>
       <li>
         <NuxtLink to="/sewer-diagnosis-inspection">Diagnosis & Inspection</NuxtLink>

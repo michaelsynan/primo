@@ -7,7 +7,8 @@
         <Nuxt-img src="/primo-main-logo.png" alt="Primo Sewer Cleaning" width="240" />
       </div>
       <div class="flex flex-col justify-center items-center md:items-start gap-6">
-        <h1 class="text-5xl md:text-6xl caslon leading-tight">Plumbing & Sewer Cleaning Services You Can Count On</h1>
+        <h1 class="text-5xl md:text-6xl caslon leading-tight">Plumbing & Sewer Cleaning Services You Can
+          Count On</h1>
         <div class="flex flex-row gap-4">
           <SharedButton text="Call Now" />
           <SharedButton text="Learn More" variant="ghost" />

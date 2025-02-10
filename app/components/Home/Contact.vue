@@ -5,7 +5,8 @@
     </div>
     <div class="flex justify-center items-start flex-col p-4 md:p-0">
       <h3 class="caslon text-4xl pb-4">Get In Touch</h3>
-      <div class="roboto text-lg pb-4 leading-loose">Serving Dickson City, Lackawanna County, and the greater
+      <div class="roboto text-lg pb-4 leading-loose text-stone-200">Serving Dickson City, Lackawanna County, and the
+        greater
         Northeastern
         Pennsylvania Region.
       </div>

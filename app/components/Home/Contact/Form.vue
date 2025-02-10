@@ -1,16 +1,16 @@
 <template>
   <div class="w-full">
     <form class="flex flex-col gap-4 w-full">
-      <label class="text-sm block">Name
-        <input type="text" class="w-full mt-1" />
+      <label class="text-sm block text-stone-400">Name
+        <input type="text" class="w-full mt-10 pt-10 rounded-sm" />
       </label>
-      <label class="text-sm block">Email
-        <input type="email" class="w-full mt-1" />
+      <label class="text-sm block text-stone-400">Email
+        <input type="email" class="w-full mt-1 rounded-sm" />
       </label>
-      <label class="text-sm block">Message
-        <textarea class="w-full mt-1" rows="6"></textarea>
+      <label class="text-sm block text-stone-400">Message
+        <textarea class="w-full mt-1 rounded-sm" rows="6"></textarea>
       </label>
-      <SharedButton text="Submit" type="submit" class="min-w-content">Submit</SharedButton>
+      <SharedButton text="Submit" type="submit" class="min-w-content" />
     </form>
   </div>
 </template>
