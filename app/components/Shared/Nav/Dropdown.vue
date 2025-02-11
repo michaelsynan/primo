@@ -3,19 +3,19 @@
 <template>
   <div class="rounded-bl">
     <ul>
-      <li>
+      <li class="border-b border-stone-800 py-2 text-stone-300 hover:text-stone-50">
         <NuxtLink to="/sewer-diagnosis-inspection">Diagnosis & Inspection</NuxtLink>
       </li>
-      <li>
+      <li class="border-b border-stone-800 py-2 text-stone-300 hover:text-stone-50">
         <NuxtLink to="/plumbing-video-camera-pipe-inspection">Video Camera Pipe Inspection</NuxtLink>
       </li>
-      <li>
+      <li class="border-b border-stone-800 py-2 text-stone-300 hover:text-stone-50">
         <NuxtLink to="/sewer-drain-cleaning-repair">Sewer & Drain Cleaning & Repairs</NuxtLink>
       </li>
-      <li>
+      <li class="border-b border-stone-800 py-2 text-stone-300 hover:text-stone-50">
         <NuxtLink to="/high-pressure-water-jetting">High Pressure Water Jetting</NuxtLink>
       </li>
-      <li>
+      <li class="text-stone-300 hover:text-stone-50">
         <NuxtLink to="/water-heater-repair-replacement">Water Heater Repair & Replacement</NuxtLink>
       </li>
     </ul>

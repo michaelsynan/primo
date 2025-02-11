@@ -16,6 +16,12 @@
   body {
     @apply bg-stone-950 text-white;
   }
+
+  *,
+  ::before,
+  ::after {
+    @apply border-stone-600;
+  }
 }
 
 @layer components {

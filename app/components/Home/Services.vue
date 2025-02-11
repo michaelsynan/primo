@@ -51,7 +51,7 @@ const servicesData = [
     <div class="grid md:grid-cols-2 grid-cols-1 gap-8 max-w-5xl mx-auto">
       <HomeService v-for="service in servicesData" :key="service.header" :icon="service.icon" :header="service.header"
         :description="service.description" :link="service.link"
-        class="bg-stone-900/50 p-8 rounded-md border-primoGrey border" />
+        class="bg-stone-900/50 p-8 rounded-md border-primoGrey hover:border-stone-200 transition-all ease duration-300 border" />
     </div>
 
   </div>
