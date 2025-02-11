@@ -15,7 +15,7 @@
         <!-- H1 for smaller screens hidden on larger screens -->
         <h1 class="text-3xl caslon leading-snug md:hidden text-center">Plumbing & Sewer Services You Can Count On</h1>
         <div class="flex flex-row gap-4 w-full">
-          <SharedButton text="Call Now" class="w-full" />
+          <SharedButton text="Call Now" class="w-full md:w-max" />
           <SharedButton class="hidden md:inline" text="Learn More" variant="ghost" />
         </div>
       </div>
