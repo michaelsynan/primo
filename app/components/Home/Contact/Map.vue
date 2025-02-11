@@ -1,12 +1,14 @@
 <template>
   <div class="border rounded map-container min-h-[500px] md:w-[500px] w-full">
-    <LMap ref="map" :zoom="zoom" :center="[41.3534, -75.7380]" :use-global-leaflet="false">
+    <LMap ref="map" :zoom="zoom" :center="[41.3534, -75.7380]" :zoomControl="false" :scrollWheelZoom="false"
+      :use-global-leaflet="false">
       <LTileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution="&copy; OpenStreetMap contributors" layer-type="base" name="OpenStreetMap" />
       <LGeoJson v-if="geojsonData" :geojson="geojsonData" :style="getGeoJsonStyle" />
     </LMap>
   </div>
 </template>
+
 
 <script setup>
 import { ref, onMounted } from 'vue';
