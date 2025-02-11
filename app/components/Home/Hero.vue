@@ -1,10 +1,11 @@
 <template>
-  <div :style="{ backgroundImage: 'url(/pipes.jpg)' }" class="border-b bg-fixed w-full px-4 md:px-0"
+  <div :style="{ backgroundImage: 'url(/best-sewer-cleaning-primo.webp)' }"
+    class="border-b bg-fixed w-full px-4 md:px-0 bg-stone-950"
     style="background-size: cover; background-position: center;">
     <div class="overlay"></div>
     <div class="grid md:grid-cols-2 grid-cols-1 gap-4 h-screen max-w-5xl mx-auto pt-[73px]">
       <div class="flex justify-center items-center">
-        <Nuxt-img src="/primo-main-logo.png" alt="Primo Sewer Cleaning" width="240" />
+        <Nuxt-img src="/primo-main-logo.webp" alt="Primo Sewer Cleaning" width="240" />
       </div>
       <div class="flex flex-col justify-center items-center md:items-start gap-6">
         <h1 class="text-5xl md:text-6xl caslon leading-tight">Plumbing & Sewer Cleaning Services <br> You Can
