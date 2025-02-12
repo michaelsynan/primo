@@ -9,7 +9,7 @@
       </div>
       <div class="flex flex-col justify-center items-center md:items-start gap-6">
         <div>
-          <p class="roboto-condensed">Serving Northeastern PA</p>
+          <p class="roboto px-2.5 border py-1 bg-primoGreen/40 w-max rounded-full">Serving Northeastern PA</p>
           <!-- H1 for larger screens hidden on smaller screens -->
           <h1 class="text-5xl md:text-6xl caslon leading-tight hidden md:block">Plumbing & Sewer Cleaning Services <br>
             You Can
