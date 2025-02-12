@@ -3,6 +3,7 @@ import { computed } from 'vue';
 
 const props = defineProps({
   text: String,
+  link: String,
   variant: {
     type: String,
     default: 'primary'
@@ -21,7 +22,7 @@ const buttonClass = computed(() => {
 </script>
 
 <template>
-  <button class="roboto" :class="buttonClass">
-    {{ props.text }}
-  </button>
+  <Nuxt-link :to="link" class="w-auto"><button class="roboto w-full" :class="buttonClass">
+      {{ props.text }}
+    </button></Nuxt-link>
 </template>
