@@ -40,15 +40,15 @@ const servicesData = [
 </script>
 
 <template>
-  <div id="our-services" class="border-b w-full py-20 ;md:py-32 flex flex-col gap-10 px-4 md:px-0">
+  <div id="our-services" class="border-b w-full py-20 md:py-32 flex flex-col gap-10 px-4 md:px-0">
 
     <div :style="{ backgroundImage: 'url(/plumber.jpg)' }"
       class="border border-primoGrey w-full max-w-5xl mx-auto flex justify-center items-center h-[280px] md:h-[400px] bg-cover rounded relative">
-      <div class="overlay"></div> <!-- Overlay for dim effect -->
+      <div class="overlay"></div>
       <h2 class="caslon text-4xl z-10 relative">Our Services</h2>
     </div>
 
-    <div class="grid md:grid-cols-2 grid-cols-1 gap-8 max-w-5xl mx-auto">
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-6 md:gap-8 max-w-5xl mx-auto">
       <HomeService v-for="service in servicesData" :key="service.header" :icon="service.icon" :header="service.header"
         :description="service.description" :link="service.link"
         class="bg-stone-900/50 p-8 rounded-md border-primoGrey hover:border-stone-200 transition-all ease duration-300 border" />

@@ -11,12 +11,12 @@
         <div>
           <p class="roboto px-2.5 border py-1 bg-primoGreen/40 w-max rounded-full">Serving Northeastern PA</p>
           <!-- H1 for larger screens hidden on smaller screens -->
-          <h1 class="text-5xl md:text-6xl caslon leading-tight hidden md:block">Plumbing & Sewer Cleaning Services <br>
+          <h1 class="text-5xl md:text-6xl fancy leading-tight hidden md:block">Plumbing & Sewer Cleaning Services <br>
             You Can
             Trust</h1>
         </div>
         <!-- H1 for smaller screens hidden on larger screens -->
-        <h1 class="text-3xl caslon leading-snug md:hidden text-center">Plumbing & Sewer Services You Can Count On</h1>
+        <h1 class="text-3xl fancy leading-snug md:hidden text-center">Plumbing & Sewer Services You Can Count On</h1>
         <div class="flex flex-row gap-4 w-full">
           <SharedButton text="Call Now" class="w-full md:w-max" />
           <SharedButton class="hidden md:inline" text="Learn More" variant="ghost" link="#our-services" />

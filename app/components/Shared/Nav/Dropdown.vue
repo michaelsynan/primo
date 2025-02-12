@@ -18,9 +18,12 @@
         <NuxtLink to="/luzerne-lackawanna-plumbing-sewer/high-pressure-water-jetting">High Pressure Water Jetting
         </NuxtLink>
       </li>
-      <li class="text-stone-300 hover:text-stone-50">
+      <li class="border-b border-stone-800 py-2 text-stone-300 hover:text-stone-50">
         <NuxtLink to="/luzerne-lackawanna-plumbing-sewer/water-heater-repair-replacement">Water Heater Repair &
           Replacement</NuxtLink>
+      </li>
+      <li class="text-stone-300 hover:text-stone-50">
+        <NuxtLink to="/luzerne-lackawanna-plumbing-sewer/faucet-installation">Faucet Installation</NuxtLink>
       </li>
     </ul>
   </div>

@@ -16,8 +16,8 @@
         <li>Item 4</li>
       </ul>
     </div>
-    <div class="mt-4">
-      <SharedButton text="Contact Us" class="max-w-content" />
+    <div class="mt-4 md:w-max">
+      <SharedButton text="Contact Us" />
     </div>
   </div>
 </template>
