@@ -19,7 +19,7 @@ const servicesData = [
     link: '/sewer-drain-cleaning-repair'
   },
   {
-    icon: '/faucet.svg',
+    icon: '/hose.svg',
     header: 'High Pressure Water Jetting',
     description: 'Depending on the type of blockage detected, Jetting can be the most efficient way to clean your sewer or drain line without the use of any harmful chemicals.',
     link: '/high-pressure-water-jetting'
@@ -31,10 +31,10 @@ const servicesData = [
     link: '/water-heater-repair-replacement'
   },
   {
-    icon: '/worker.svg',
-    header: 'Water Heater Repair & Replacement',
-    description: 'Your water heater plays a critical role in your home. It provides you with the hot water you need to shower, wash dishes, and much more!',
-    link: '/water-heater-repair-replacement'
+    icon: '/faucet.svg',
+    header: 'Faucet Installation',
+    description: 'Ensure smooth operation and prevent leaks or drips with our expert faucet repair services. We handle all types of faucets, ensuring they perform well and look great in your home!',
+    link: '/faucet-installation'
   }
 ];
 </script>
