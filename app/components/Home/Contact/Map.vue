@@ -18,22 +18,20 @@ import 'leaflet/dist/leaflet.css';
 const zoom = ref(9);
 const geojsonData = ref(null);
 
-// Style function defined at the script level, not inside onMounted
 function getGeoJsonStyle(feature) {
-  // Applying highly visible style for testing
   return {
-    color: "red", // Using red for visibility
-    weight: 10, // Increased weight for visibility
-    opacity: 1, // Full opacity
-    fillColor: "yellow", // Using yellow for visibility
-    fillOpacity: 0.8 // Slightly less than full for contrast
+    color: "red",
+    weight: 10,
+    opacity: 1,
+    fillColor: "yellow",
+    fillOpacity: 0.8
   };
 }
 
 onMounted(async () => {
   try {
     const response = await fetch('/primo3_fixed.geojson');
-    geojsonData.value = await response.json(); // Ensure the data is loaded
+    geojsonData.value = await response.json();
   } catch (error) {
     console.error('Failed to load GeoJSON:', error);
   }

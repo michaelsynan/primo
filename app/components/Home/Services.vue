@@ -45,7 +45,7 @@ const servicesData = [
     <div :style="{ backgroundImage: 'url(/plumber.jpg)' }"
       class="border border-primoGrey w-full max-w-5xl mx-auto flex justify-center items-center h-[280px] md:h-[400px] bg-cover rounded relative">
       <div class="overlay"></div>
-      <h2 class="caslon text-4xl z-10 relative">Our Services</h2>
+      <h2 class="fancy text-4xl z-10 relative">Our Services</h2>
     </div>
 
     <div class="grid md:grid-cols-2 grid-cols-1 gap-6 md:gap-8 max-w-5xl mx-auto">

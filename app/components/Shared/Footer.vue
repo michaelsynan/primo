@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="border-t py-2 ">
+  <div class="border-t py-2 bg-stone-900">
     <div class="flex flex-col md:flex-row gap-4 justify-between max-w-5xl mx-auto  py-3 px-4 md:px-0">
       <div class="flex flex-col md:flex-row gap-12 items-center md:items-start">
         <div><Nuxt-img src="/primo-logo-white.png" width="100" /></div>

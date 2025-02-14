@@ -1,10 +1,10 @@
 <template>
-  <div class="border-b bg-stone-950 fixed" ref="dropdownContainer">
+  <div class="border-b bg-stone-900 fixed" ref="dropdownContainer">
     <div class="bg-primoRed text-center py-0.5 roboto-condensed cursor-pointer">
       Call Now • (570) 905-8441
     </div>
     <div class="relative py-1.5 md:py-2 border-t">
-      <div class="text-left md:text-center fancy font-bold text-lg md:text-xl tracking-wide px-2">
+      <div class="text-left md:text-center fancy-bold font-bold text-lg md:text-xl tracking-wide px-2">
         <Nuxt-link to="/">PRIMO SEWER CLEANING</Nuxt-link>
       </div>
       <div>
