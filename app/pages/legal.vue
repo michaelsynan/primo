@@ -2,7 +2,7 @@
 
 <template>
   <div class="flex flex-col  gap-4 py-40 max-w-4xl mx-auto px-4">
-    <h1 class="text-4xl caslon">Legal Disclaimer</h1>
+    <h1 class="text-4xl fancy">Legal Disclaimer</h1>
     <div class="roboto text-lg leading-loose">
       <p>The information on this website is provided "as is" without any representations or warranties, express or
         implied. Primo Sewer Cleaning makes no representations or warranties in relation to this website or the

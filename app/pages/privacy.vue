@@ -2,7 +2,7 @@
 
 <template>
   <div class="flex flex-col  gap-4 max-w-4xl mx-auto px-4 py-40">
-    <h1 class="text-4xl caslon">Privacy Policy</h1>
+    <h1 class="text-4xl fancy">Privacy Policy</h1>
     <div class="roboto text-lg leading-loose">
       <p>
         Primo Sewer Cleaning is committed to protecting your personal information. This Privacy Policy explains how we

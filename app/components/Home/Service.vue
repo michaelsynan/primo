@@ -11,7 +11,7 @@ defineProps({
   <div class="flex flex-col justify-between gap-4 group">
     <img class="w-12" :src="icon" :alt="header" />
     <div>
-      <h3 class="caslon text-2xl py-2 text-stone-50 tracking-wide">{{ header }}</h3>
+      <h3 class="fancy text-2xl py-2 text-stone-50 tracking-wide">{{ header }}</h3>
       <p
         class="roboto leading-loose text-stone-400 group-hover:text-stone-100 transition-colors ease-in-out duration-200">
         {{

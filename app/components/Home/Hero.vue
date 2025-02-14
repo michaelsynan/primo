@@ -5,7 +5,7 @@
     <div class="overlay"></div>
     <div class="grid md:grid-cols-2 grid-cols-1 gap-4 h-screen max-w-5xl mx-auto pt-[73px]">
       <div class="flex justify-center items-center w-[200px] md:w-[240px] mx-auto">
-        <Nuxt-img src="/primo-main-logo.webp" alt="Primo Sewer Cleaning" width="240" />
+        <Nuxt-img src="/primo-logo-gold-2.png" alt="Primo Sewer Cleaning" width="240" />
       </div>
       <div class="flex flex-col justify-center items-center md:items-start gap-6">
         <div>

@@ -4,12 +4,12 @@
       Call Now • (570) 905-8441
     </div>
     <div class="relative py-1.5 md:py-2 border-t">
-      <div class="text-left md:text-center caslon text-lg md:text-xl tracking-wide px-2">
+      <div class="text-left md:text-center fancy font-bold text-lg md:text-xl tracking-wide px-2">
         <Nuxt-link to="/">PRIMO SEWER CLEANING</Nuxt-link>
       </div>
       <div>
         <div @click="toggleDropdown" @click.stop
-          class="absolute right-0 top-0 h-full flex items-center justify-center px-4 md:px-8 border-l caslon text-lg md:text-xl tracking-wide cursor-pointer">
+          class="absolute right-0 top-0 h-full flex items-center justify-center px-4 md:px-8 border-l fancy text-lg md:text-xl tracking-wide cursor-pointer">
           <div class="flex flex-row gap-3"><span>Services</span>
 
             <img class="transition-all duration-300" :class="{ 'rotate-180': showDropdown }" src="/chevron-thin.svg" />
