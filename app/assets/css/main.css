@@ -19,6 +19,9 @@
   p {
     @apply leading-loose;
   }
+  li {
+    @apply !mb-2.5;
+  }
   *,
   ::before,
   ::after {

@@ -1,28 +1,35 @@
 <template>
-  <div class="border-b bg-stone-900 fixed w-full" ref="dropdownContainer">
+  <header class="border-b bg-stone-900 fixed w-full" ref="dropdownContainer">
     <div class="bg-primoRed text-center py-0.5 roboto-condensed cursor-pointer">
-      Call Now • (570) 905-8441
+      <a href="tel:+15709058441" class="text-white" aria-label="Call Primo Sewer Cleaning at (570) 905-8441">
+        Call Now • (570) 905-8441
+      </a>
     </div>
     <div class="relative py-1.5 md:py-2 border-t">
       <div class="text-left md:text-center fancy-bold font-bold text-lg md:text-xl tracking-wide px-2">
         <NuxtLink to="/">PRIMO SEWER CLEANING</NuxtLink>
       </div>
-      <div>
-        <div @click="toggleDropdown" @click.stop
-          class="absolute right-0 top-0 h-full flex items-center justify-center px-4 md:px-8 border-l fancy text-lg md:text-xl tracking-wide cursor-pointer">
+      <nav>
+        <button @click="toggleDropdown" @click.stop
+          class="absolute right-0 top-0 h-full flex items-center justify-center px-4 md:px-8 border-l fancy text-lg md:text-xl tracking-wide cursor-pointer"
+          aria-haspopup="menu" :aria-expanded="showDropdown.toString()" aria-controls="services-menu">
           <div class="flex flex-row gap-3">
             <span>Services</span>
-            <img class="transition-all duration-300" :class="{ 'rotate-180': showDropdown }" src="/chevron-thin.svg" />
+            <img class="transition-all duration-300" :class="{ 'rotate-180': showDropdown }" src="/chevron-thin.svg"
+              alt="" aria-hidden="true" />
           </div>
-        </div>
-      </div>
+        </button>
+      </nav>
     </div>
     <transition name="fade">
-      <SharedNavDropdown v-if="showDropdown"
-        class="absolute w-full md:w-[400px] top-full right-0 border p-4 md:p-10 bg-stone-950 border-l-0 md:border-l border-r-0" />
+      <nav v-show="showDropdown" id="services-menu" role="menu"
+        class="absolute w-full md:w-[400px] top-full right-0 border p-4 md:p-10 bg-stone-950 border-l-0 md:border-l border-r-0">
+        <SharedNavDropdown />
+      </nav>
     </transition>
-  </div>
+  </header>
 </template>
+
 
 <script setup>
 import { ref, onMounted, onUnmounted, watch } from 'vue'
@@ -42,7 +49,6 @@ const handleClickOutside = event => {
   }
 }
 
-// Close dropdown on route change
 watch(route, () => {
   showDropdown.value = false
 })

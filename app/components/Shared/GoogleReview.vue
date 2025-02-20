@@ -14,7 +14,7 @@ const reviewCount = ref(5)
       <!-- Google Icon -->
       <UIcon name="i-logos-google-icon" class="w-6 h-6 flex-shrink-0 mt-0.5" />
       <!-- Rating Section -->
-      <div class="flex flex-col gap-0 text-sm ml-1">
+      <div class="flex flex-col gap-0 text-sm ml-1 items-center">
         <div class="text-white flex items-center">
           <div class="mr-1 mt-0.5 text-sm font-bold">4.8</div>
           <UIcon v-for="(star, index) in reviewCount" :key="index" name="i-mdi-star"

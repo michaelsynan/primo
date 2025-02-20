@@ -3,7 +3,7 @@
 <template>
   <div class="flex flex-col justify-center gap-4 min-h-screen mx-auto px-4 py-40">
     <div class="max-w-4xl mx-auto">
-      <h1 class="text-4xl fancy mb-3">Sewer Diagnosis & Inspection</h1>
+      <h1 class="text-4xl fancy mb-4">Sewer Diagnosis & Inspection</h1>
       <NuxtImg src="/heater.jpg" alt="High Pressure Water Jetting"
         class="h-80 object-cover object-top rounded w-full mb-6 border" />
       <p class="roboto text-xl leading-loose">
@@ -12,7 +12,7 @@
         ensuring your plumbing needs are met with professionalism and enthusiasm. We handle all types of sewer and drain
         issues including clogs, leaks, and complex repairs.
       </p>
-      <h2 class="text-2xl font-bold mt-6 mb-2">Common Symptoms of Sewer Problems</h2>
+      <h2 class="text-2xl font-bold mt-6 mb-2.5">Common Symptoms of Sewer Problems</h2>
       <ul class="list-disc pl-5 space-y-2 text-lg">
         <li><strong>Water Backup:</strong> Occurs in showers, toilets, or sinks, indicating a possible main line clog.
         </li>
@@ -27,7 +27,7 @@
 
     <SharedCTA />
     <div class="max-w-4xl mx-auto">
-      <h2 class="text-2xl font-bold mb-2">How We Address Tree Root Intrusions</h2>
+      <h2 class="text-2xl font-bold mb-2.5">How We Address Tree Root Intrusions</h2>
       <ul class="list-disc pl-5 space-y-2 text-lg">
         <li><strong>Rooter and Drain Cleaning:</strong> We remove tree root clogs to restore functionality to your sewer
           system.</li>
@@ -40,7 +40,7 @@
           hydraulic
           techniques.</li>
       </ul>
-      <h2 class="text-2xl font-bold mt-6 mb-2">Preventative Maintenance</h2>
+      <h2 class="text-2xl font-bold mt-6 mb-2.5">Preventative Maintenance</h2>
       <p class="text-lg">
         Don’t wait for a complete failure. Regular inspections and maintenance can prevent major backups and damage. Our
         services help keep your system in optimal condition, reducing the risk of environmental and property damage.

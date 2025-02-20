@@ -40,9 +40,9 @@ const servicesData = [
 </script>
 
 <template>
-  <div id="our-services" class="border-b w-full py-20 md:py-32 flex flex-col gap-10 px-4 md:px-0">
+  <div class="border-b w-full py-20 md:py-32 flex flex-col gap-10 px-4 md:px-0">
 
-    <div :style="{ backgroundImage: 'url(/plumber.jpg)' }"
+    <div id="our-services" :style="{ backgroundImage: 'url(/plumber.jpg)' }"
       class="border border-primoGrey w-full max-w-5xl mx-auto flex justify-center items-center h-[280px] md:h-[400px] bg-cover rounded relative">
       <div class="overlay"></div>
       <h2 class="fancy text-4xl z-10 relative">Our Services</h2>
