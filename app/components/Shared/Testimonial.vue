@@ -9,7 +9,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="px-5 max-w-sm rounded-lg  text-center flex-1 basis-1/3 bg-stone-900 p-5">
+  <div class="px-5 max-w-full md:max-w-sm rounded-lg  text-center flex-1 basis-1/3 bg-stone-900 p-5">
     <div class="w-full mb-6">
       <div class="w-16 h-16 flex items-center justify-center border border-stone-500 rounded-full mx-auto"
         :style="{ backgroundImage: `url(${props.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }" />

@@ -10,7 +10,7 @@
           </div>
 
           <div class="flex flex-col text-sm font-bold pb-1 gap-2 roboto">
-            <div>Menu</div>
+            <div class="text-center md:text-left">Menu</div>
             <div class="flex flex-col gap-1 font-normal text-center md:text-left">
               <NuxtLink to="/privacy" class="hover:underline" aria-label="Read our Privacy Policy">Privacy</NuxtLink>
               <NuxtLink to="/legal" class="hover:underline" aria-label="View Legal Information">Legal</NuxtLink>

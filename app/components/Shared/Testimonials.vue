@@ -23,12 +23,12 @@ const testimonials: Testimonial[] = [
           <SharedGoogleReview class="max-w-screen-sm" />
         </div>
       </div>
-      <div class="relative w-full flex flex-col md:flex-row justify-center items-center md:items-start gap-10">
-        <SharedTestimonial class="mb-10" v-for="(testimonial, index) in testimonials" :key="index"
+      <div class="relative w-full flex flex-col md:flex-row justify-center items-center md:items-start gap-6 md:gap-10">
+        <SharedTestimonial class="mb-0 md:mb-10" v-for="(testimonial, index) in testimonials" :key="index"
           :name="testimonial.name" :text="testimonial.text" :image="testimonial.image"
           :profession="testimonial.profession" :stars="testimonial.stars" />
       </div>
-      <div class="flex flex-row max-w-content">
+      <div class="flex flex-row max-w-content mt-8 md:mt-0">
         <nuxt-link class="items-center flex flex-row hover:underline roboto"
           to="https://www.google.com/search?hl=en-US&gl=us&q=Primo+Sewer+Cleaning&ludocid=17634468255813273309&lsig=AB86z5WvcyVaNQ2I_lcMAgYKntWW#lrd=0xadfd59710b8cb173:0xf4ba37727ea706dd,1"
           target="_blank">

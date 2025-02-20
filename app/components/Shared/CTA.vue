@@ -2,23 +2,23 @@
 
 <template>
   <div
-    class="max-w-4xl mx-auto w-full rounded border-2 bg-primoBrown/20 text-primoWhite text-center py-12 md:py-18 my-10 flex flex-col gap-8 px-8">
+    class="max-w-4xl mx-auto w-full rounded border-2 bg-primoBrown/20 text-primoWhite text-center py-10 md:py-12 md:py-18 my-10 flex flex-col gap-6 md:gap-8 px-8">
     <div class="hidden md:block">
-      <h2 class="text-3xl font-bold roboto">
+      <h2 class="text-2xl md:text-3xl font-bold roboto">
 
         Need Immediate Help?
         <span class="underline-thick">Give Us a Call.</span>
       </h2>
     </div>
     <div class="block md:hidden">
-      <h2 class="text-3xl font-bold leading-relaxed">
+      <h2 class="text-2xl md:text-3xl font-bold leading-relaxed">
 
         Need Immediate Help?<div class="mt-2">
-          <span class="underline-thick mt-10">Give Us a Call.</span>
+          <span class="underline-thick mt-10 text-2xl md:text-3xl">Give Us a Call.</span>
         </div>
       </h2>
     </div>
-    <p class="text-xl roboto">Our team is ready to solve your sewer problems efficiently and effectively.</p>
+    <p class="text-lg md:text-xl roboto">Our team is ready to solve your sewer problems efficiently and effectively.</p>
     <SharedButton icon="true" text="Get Help Now" class="mx-auto mt-6 w-full" />
   </div>
 </template>
