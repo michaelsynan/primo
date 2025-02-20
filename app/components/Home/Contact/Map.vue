@@ -1,14 +1,16 @@
 <template>
-  <div class="border rounded map-container min-h-[500px] md:w-[500px] w-full">
-    <LMap ref="map" :zoom="zoom" :center="[41.3534, -75.7380]" :zoomControl="false" :scrollWheelZoom="false"
+  <div class="border rounded map-container min-h-[500px] md:w-[500px] w-full relative">
+    <LMap ref="map" :zoom="zoom" :center="center" :zoomControl="false" :scrollWheelZoom="false"
       :use-global-leaflet="false">
       <LTileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution="&copy; OpenStreetMap contributors" layer-type="base" name="OpenStreetMap" />
       <LGeoJson v-if="geojsonData" :geojson="geojsonData" :style="getGeoJsonStyle" />
     </LMap>
+    <p @click="recenterMap" class="text-xs text-start text-gray-400 mt-2 cursor-pointer hover:underline">
+      Click to recenter map
+    </p>
   </div>
 </template>
-
 
 <script setup>
 import { ref, onMounted } from 'vue';
@@ -16,7 +18,9 @@ import { LMap, LTileLayer, LGeoJson } from '@vue-leaflet/vue-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 const zoom = ref(9);
+const center = ref([41.3534, -75.7380]); // Store center as reactive
 const geojsonData = ref(null);
+const map = ref(null); // Reference to the map
 
 function getGeoJsonStyle(feature) {
   return {
@@ -27,6 +31,12 @@ function getGeoJsonStyle(feature) {
     fillOpacity: 0.8
   };
 }
+
+const recenterMap = () => {
+  if (map.value) {
+    map.value.leafletObject.setView(center.value, zoom.value);
+  }
+};
 
 onMounted(async () => {
   try {

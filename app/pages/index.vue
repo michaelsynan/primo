@@ -1,7 +1,8 @@
 <template>
-  <div class="flex flex-col items-center justify-center gap-4">
+  <main class="flex flex-col items-center justify-center">
     <HomeHero />
     <LazyHomeServices />
+    <SharedTestimonials />
     <HomeContact />
-  </div>
+  </main>
 </template>

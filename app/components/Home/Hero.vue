@@ -1,3 +1,19 @@
+<script setup>
+
+const scrollToSection = async () => {
+  await nextTick(); // Ensure the DOM is ready
+
+  const target = document.getElementById("our-services");
+  if (target) {
+    const top = target.getBoundingClientRect().top + window.scrollY; // Get precise position
+    window.scrollTo({
+      top: top - 20, // Adjust for any fixed headers
+      behavior: "smooth",
+    });
+  }
+};
+</script>
+
 <template>
   <div :style="{ backgroundImage: 'url(/best-sewer-cleaning-primo.webp)' }"
     class="border-b bg-fixed w-full px-4 md:px-0 bg-stone-950"
@@ -9,7 +25,9 @@
       </div>
       <div class="flex flex-col justify-center items-center md:items-start gap-6">
         <div>
-          <p class="roboto px-2.5 border py-1 bg-primoGreen/40 w-max rounded-full">Serving Northeastern PA</p>
+          <p class="roboto-condensed uppercase border-white text-white/90  w-max">Serving
+            Northeastern
+            PA</p>
           <!-- H1 for larger screens hidden on smaller screens -->
           <h1 class="text-5xl md:text-6xl fancy leading-tight hidden md:block">Plumbing & Sewer Cleaning Services <br>
             You Can
@@ -18,8 +36,9 @@
         <!-- H1 for smaller screens hidden on larger screens -->
         <h1 class="text-3xl fancy leading-snug md:hidden text-center">Plumbing & Sewer Services You Can Count On</h1>
         <div class="flex flex-row gap-4 w-full">
-          <SharedButton text="Call Now" class="w-full md:w-max" />
-          <SharedButton class="hidden md:inline" text="Learn More" variant="ghost" link="#our-services" />
+          <SharedButton icon="true" text="Call Now" class="w-full md:w-max" />
+          <SharedButton @click="scrollToSection" class="hidden md:inline" text="Learn More" variant="ghost" />
+
         </div>
       </div>
     </div>

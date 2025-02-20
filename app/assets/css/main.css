@@ -16,7 +16,9 @@
   body {
     @apply bg-stone-950 text-white;
   }
-
+  p {
+    @apply leading-loose;
+  }
   *,
   ::before,
   ::after {
@@ -33,7 +35,10 @@
   }
 }
 
-.roboto {
+.roboto,
+p,
+ul,
+li {
   font-family: Roboto, sans-serif;
 }
 

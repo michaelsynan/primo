@@ -4,6 +4,7 @@ import { computed } from 'vue';
 const props = defineProps({
   text: String,
   link: String,
+  icon: Boolean,
   variant: {
     type: String,
     default: 'primary'
@@ -20,9 +21,10 @@ const buttonClass = computed(() => {
   }
 });
 </script>
-
 <template>
-  <Nuxt-link :to="link" class="w-auto"><button class="roboto w-full" :class="buttonClass">
-      {{ props.text }}
-    </button></Nuxt-link>
+  <Nuxt-link :to="link" class="w-full md:w-max">
+    <button class="roboto flex items-center justify-center w-full md:w-max" :class="buttonClass">
+      <UIcon v-if="props.icon" name="i-mdi-phone" class="w-4 h-4 mr-2" />{{ props.text }}
+    </button>
+  </Nuxt-link>
 </template>
