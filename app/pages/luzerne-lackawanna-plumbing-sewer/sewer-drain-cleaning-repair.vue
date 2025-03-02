@@ -4,8 +4,8 @@
   <div class="flex flex-col justify-center gap-4 min-h-screen mx-auto px-4 py-40">
     <div class="max-w-4xl mx-auto">
       <h1 class="text-4xl fancy mb-4">Sewer Drain Cleaning & Repair</h1>
-      <NuxtImg src="/heater.jpg" alt="Sewer Drain Cleaning and Repair"
-        class="h-80 object-cover object-top rounded w-full mb-6 border" />
+      <NuxtImg src="/clean.webp" alt="Sewer Drain Cleaning and Repair"
+        class="h-80 object-cover object-middle rounded w-full mb-6 border" />
       <p class="roboto text-xl leading-loose">
         At Primo Sewer Cleaning, we specialize in sewer drain cleaning and repair services to ensure your plumbing
         system is running smoothly.

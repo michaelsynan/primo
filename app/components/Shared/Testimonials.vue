@@ -9,7 +9,7 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   { name: 'Joanne Braun', text: 'These guys were great, came out the next day, and managed to figure out what turned out to be quite the clog. Throughout it all they were very polite and cleaned up after themselves. I would definitely recommend.', image: '/pic2.png', profession: 'Operations Manager', stars: 5 },
-  { name: 'Michelle Urso', text: 'They came within a few hours and we are so appreciative! They fixed our problem with our drainage pipe and they got us up and running again within a half an hour! they also put a clean out section in our drain pipe for the future!! They were very kind and professional! Highly recommend!', image: '/pic1.png', profession: 'Videographer', stars: 5 },
+  { name: 'Michelle Urso', text: 'They came within a few hours and we are so appreciative! They fixed our problem with our drainage pipe and they got us up and running again within a half an hour! they also put a clean out section in our drain pipe for the future!! They were very kind and professional!', image: '/pic1.png', profession: 'Videographer', stars: 5 },
   { name: 'Wendy Miscavage', text: 'These plumbers that came out to Arbys restaurant was fantastic! They listened to what was going on and immediately got the job done. We will recommend them to everyone we know. Very professional and knowledgeable!', image: '/pic3.png', profession: 'Actress', stars: 5 },
 ]
 </script>
@@ -29,10 +29,16 @@ const testimonials: Testimonial[] = [
           :profession="testimonial.profession" :stars="testimonial.stars" />
       </div>
       <div class="flex flex-row max-w-content mt-8 md:mt-0">
-        <nuxt-link class="items-center flex flex-row hover:underline roboto"
+        <nuxt-link class="items-center flex flex-row roboto group"
           to="https://www.google.com/search?hl=en-US&gl=us&q=Primo+Sewer+Cleaning&ludocid=17634468255813273309&lsig=AB86z5WvcyVaNQ2I_lcMAgYKntWW#lrd=0xadfd59710b8cb173:0xf4ba37727ea706dd,1"
           target="_blank">
-          Read All Testimonials
+          <span class="mr-1">Read All Testimonials </span>
+          <div class="group-hover:translate-x-1.5 transition-transform duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="m13.692 17.308l-.707-.72l4.088-4.088H5v-1h12.073l-4.088-4.088l.707-.72L19 12z" />
+            </svg>
+          </div>
         </nuxt-link>
       </div>
     </UContainer>

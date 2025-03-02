@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="border-t py-2 bg-stone-900">
+  <div class="border-t py-2 bg-stone-900/80">
     <div class="flex flex-col md:flex-row gap-4 justify-between max-w-5xl mx-auto py-8 pb-10 px-4 md:px-0">
       <div class="flex flex-col md:flex-row gap-12 items-center md:items-start">
         <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-16">
@@ -22,11 +22,6 @@
       </div>
       <div class="flex flex-col items-end text-right">
         <div class="flex flex-row gap-4 w-full mx-auto justify-center md:justify-end mt-6 md:mt-0">
-          <Nuxt-link to="https://www.facebook.com/PrimoSewerCleaning" target="_blank"
-            aria-label="Visit Primo Sewer Cleaning on Facebook">
-            <UIcon name="i-mdi-facebook" class="w-8 h-8" aria-hidden="true" />
-          </Nuxt-link>
-
           <Nuxt-link to="https://www.yelp.com/biz/primo-sewer-cleaning-dickson-city" target="_blank"
             aria-label="Read Primo Sewer Cleaning reviews on Yelp">
             <UIcon name="i-mdi-yelp" class="w-8 h-8" aria-hidden="true" />
