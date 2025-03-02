@@ -46,7 +46,7 @@
         services help keep your system in optimal condition, reducing the risk of environmental and property damage.
       </p>
       <div class="mt-6 md:w-max">
-        <SharedButton text="Contact Us" class="max-w-content" />
+        <SharedButton to="/contact-a-plumber" text="Contact Us" class="max-w-content" />
       </div>
     </div>
   </div>
