@@ -4,7 +4,7 @@
   <div class="flex flex-col justify-center gap-4 min-h-screen mx-auto px-4 py-40">
     <div class="max-w-4xl mx-auto">
       <h1 class="text-4xl fancy mb-4">Water Heater Repair & Replacement</h1>
-      <NuxtImg src="/plumber-heater-fixing.webp" alt="Water Heater Repair and Replacement"
+      <NuxtImg src="/plumber-heater-fixing.webp" alt="Water Heater Repair and Replacement" placeholder
         class="h-80 object-cover object-top rounded w-full mb-6 border" />
       <p class="roboto text-xl leading-loose">
         At Primo Sewer Cleaning, we provide expert water heater repair and replacement services to ensure you always

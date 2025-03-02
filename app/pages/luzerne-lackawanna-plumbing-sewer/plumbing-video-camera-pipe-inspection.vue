@@ -4,7 +4,7 @@
   <div class="flex flex-col justify-center gap-4 min-h-screen mx-auto px-4 py-40">
     <div class="max-w-4xl mx-auto">
       <h1 class="text-4xl fancy mb-4">Video Camera Inspection</h1>
-      <NuxtImg src="/video.webp" alt="Video Camera Inspection"
+      <NuxtImg src="/video.webp" alt="Video Camera Inspection" placeholder
         class="h-80 object-cover object-center rounded w-full mb-6 border" />
       <p class="roboto text-xl leading-loose">
         At Primo Sewer Cleaning, we use advanced video camera inspection technology to provide a detailed view of your

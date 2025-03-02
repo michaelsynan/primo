@@ -4,7 +4,7 @@
   <div class="flex flex-col justify-center gap-4 min-h-screen mx-auto px-4 py-40">
     <div class="max-w-4xl mx-auto">
       <h1 class="text-4xl fancy mb-4">Faucet Installation</h1>
-      <NuxtImg src="/faucet-installation-plumber.webp" alt="Faucet Installation Service"
+      <NuxtImg src="/faucet-installation-plumber.webp" alt="Faucet Installation Service" placeholder
         class="h-80 object-cover object-top rounded w-full mb-6 border" />
       <p class="roboto text-xl leading-loose">
         Upgrade your kitchen or bathroom with professional faucet installation from Primo Sewer Cleaning. Whether you're
