@@ -1,9 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="flex flex-col justify-center gap-4 min-h-screen mx-auto px-4 py-40">
+  <div class="flex flex-col justify-center gap-4 min-h-screen mx-auto px-4 py-30 md:py-40">
     <div class="max-w-4xl mx-auto">
-      <h1 class="text-4xl fancy mb-4">Sewer Diagnosis & Inspection</h1>
+      <h1 class="text-3xl md:text-4xl fancy mb-10 text-center">Sewer Diagnosis & Inspection</h1>
       <NuxtImg src="/inspect.webp" alt="High Pressure Water Jetting" placeholder
         class="h-80 object-cover object-top rounded w-full mb-6 border" />
       <p class="roboto text-xl leading-loose">
