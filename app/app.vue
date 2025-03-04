@@ -46,17 +46,13 @@ onUnmounted(() => {
   opacity: 0;
 }
 
-/* Page transition styles */
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
 }
 
 .page-enter,
-.page-leave-to
-
-/* Starting and ending state for the leave */
-  {
+.page-leave-to {
   opacity: 0;
 }
 </style>
