@@ -19,6 +19,11 @@ export default defineNuxtConfig({
       },
     },
   },
+  seo: {
+    meta: {
+      description: "Sewer and Plumber in  Lackawanna & Luzerne County",
+    },
+  },
 
   compatibilityDate: "2024-11-27",
 });
