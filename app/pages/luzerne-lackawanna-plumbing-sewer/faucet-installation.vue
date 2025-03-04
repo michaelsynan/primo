@@ -5,7 +5,7 @@
     <div class="max-w-4xl mx-auto">
       <h1 class="text-3xl md:text-4xl fancy mb-4 text-center">Faucet Installation</h1>
       <NuxtImg src="/faucet-installation-plumber.webp" alt="Faucet Installation Service" placeholder
-        class="h-80 object-cover object-top rounded w-full mb-6 border" />
+        class="h-60 md:h-80 object-cover object-top rounded w-full mb-6 border" />
       <p class="roboto text-xl leading-loose">
         Upgrade your kitchen or bathroom with professional faucet installation from Primo Sewer Cleaning. Whether you're
         replacing an old, leaky faucet or installing a brand-new fixture, our expert plumbers ensure a precise and
@@ -56,7 +56,7 @@
       </p>
 
       <div class="mt-6 md:w-max">
-        <SharedButton to="/contact-a-plumber" text="Contact Us" class="max-w-content" />
+        <SharedButton link="/contact-a-plumber" text="Contact Us" class="max-w-content" />
       </div>
     </div>
   </div>

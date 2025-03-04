@@ -5,7 +5,7 @@
     <div class="max-w-4xl mx-auto">
       <h1 class="text-3xl md:text-4xl fancy mb-4 text-center">High Pressure Water Jetting</h1>
       <NuxtImg src="/jetting.webp" alt="High Pressure Water Jetting" placeholder
-        class="h-80 object-cover object-middle rounded w-full mb-6 border" />
+        class="h-60 md:h-80 object-cover object-middle rounded w-full mb-6 border" />
       <p class="roboto text-xl leading-loose">
         At Primo Sewer Cleaning, we offer high pressure water jetting services as a powerful, non-invasive solution for
         clearing clogs and blockages from your sewer lines. Using high-pressure water, we can remove grease, debris,

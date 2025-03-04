@@ -5,7 +5,7 @@
     <div class="max-w-4xl mx-auto">
       <h1 class="text-3xl md:text-4xl fancy mb-10 text-center">Sewer Diagnosis & Inspection</h1>
       <NuxtImg src="/inspect.webp" alt="High Pressure Water Jetting" placeholder
-        class="h-80 object-cover object-top rounded w-full mb-6 border" />
+        class="h-60 md:h-80 object-cover object-top rounded w-full mb-6 border" />
       <p class="roboto text-xl leading-loose">
         At Primo Sewer Cleaning, our technicians perform thorough inspections and accurate diagnoses at competitive
         rates,

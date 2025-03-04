@@ -38,8 +38,9 @@ const scrollToSection = async () => {
           <h1 class="text-3xl fancy leading-snug md:hidden text-center">Plumbing & Sewer Services You Can Count On</h1>
         </div>
         <div class="flex flex-row gap-4 w-full">
-          <SharedButton icon="true" text="Call Now" class="w-full md:w-max" />
-          <SharedButton @click="scrollToSection" class="hidden md:inline" text="Learn More" variant="ghost" />
+          <SharedButton icon="true" text="Call Now" class="w-full md:w-max" link="631-942-0582" variant="call" />
+          <SharedButton @click="scrollToSection" class="hidden md:inline w-full md:w-max" text="Learn More"
+            variant="ghost" />
 
         </div>
       </div>
@@ -58,7 +59,7 @@ const scrollToSection = async () => {
   background-color: rgba(0, 0, 0, 0.6);
   pointer-events: none;
   z-index: 0;
-  height: 100%;
+  height: 110%;
 }
 
 .grid {

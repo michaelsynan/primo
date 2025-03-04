@@ -23,7 +23,7 @@
     </div>
     <transition name="fade">
       <nav v-show="showDropdown" id="services-menu" role="menu"
-        class="absolute w-full md:w-[400px] top-full right-0 border p-4 md:p-10 bg-stone-950 border-l-0 md:border-l border-r-0">
+        class="absolute w-full md:w-[400px] top-full right-0 border p-4 md:p-5 bg-stone-950 border-l-0 md:border-l border-r-0">
         <SharedNavDropdown />
       </nav>
     </transition>
