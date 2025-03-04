@@ -9,6 +9,15 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+  app: {
+    head: {
+      titleTemplate: "%s %separator %siteName",
+      templateParams: {
+        separator: "—", // choose a separator
+        siteName: "Primo Sewer Cleaning", // set a site name
+      },
+    },
+  },
 
   tailwindcss: {
     theme: {
