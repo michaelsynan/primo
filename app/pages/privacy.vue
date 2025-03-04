@@ -39,7 +39,7 @@
       </ul>
     </div>
     <div class="mt-4">
-      <SharedButton text="See Services" class="max-w-content" />
+      <SharedButton text="See Services" class="max-w-content" inline />
     </div>
   </div>
 </template>

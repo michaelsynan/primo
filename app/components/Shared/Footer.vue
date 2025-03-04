@@ -14,7 +14,7 @@
             <div class="flex flex-col gap-1 font-normal text-center md:text-left">
               <NuxtLink to="/privacy" class="hover:underline" aria-label="Read our Privacy Policy">Privacy</NuxtLink>
               <NuxtLink to="/legal" class="hover:underline" aria-label="View Legal Information">Legal</NuxtLink>
-              <NuxtLink to="/#contact" class="hover:underline" aria-label="Contact Us">Contact</NuxtLink>
+              <NuxtLink to="/contact-a-plumber" class="hover:underline" aria-label="Contact Us">Contact</NuxtLink>
             </div>
 
           </div>

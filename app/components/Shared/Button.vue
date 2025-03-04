@@ -31,9 +31,9 @@ const buttonClass = computed(() => {
     case 'ghost':
       return 'hover:bg-primoGreen/80 text-white transition-all py-2 px-4 text-base border border-white hover:border-primoGreen/80 rounded cursor-pointer';
     case 'email':
-      return 'bg-blue-600 hover:bg-blue-700 transition-all py-2 px-4 text-base text-white rounded cursor-pointer border-blue-600 border';
+      return 'bg-primoGreen hover:bg-primoGreen/80 transition-all py-2 px-4 text-base text-white rounded cursor-pointer border-primoGreen border';
     case 'whatsapp':
-      return 'bg-green-600 hover:bg-green-700 transition-all py-2 px-4 text-base text-white rounded cursor-pointer border-green-600 border';
+      return 'bg-primoGreen hover:bg-primoGreen/80 transition-all py-2 px-4 text-base text-white rounded cursor-pointer border-primoGreen border';
     case 'primary':
     default:
       return 'bg-primoGreen hover:bg-primoGreen/80 transition-all py-2 px-4 text-base text-white rounded cursor-pointer border-primoGreen border';

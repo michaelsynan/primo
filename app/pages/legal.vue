@@ -15,8 +15,8 @@
       <p>Nothing on this website constitutes, or is meant to constitute, advice of any kind. If you require advice in
         relation to any legal, financial, or medical matter, you should consult an appropriate professional.</p>
     </div>
-    <div class="mt-4">
-      <SharedButton text="See Services" class="max-w-content" />
+    <div class="mt-4 w-max-content">
+      <SharedButton text="See Services" class="w-full md:w-max" inline />
     </div>
   </div>
 </template>
