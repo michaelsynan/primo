@@ -19,7 +19,7 @@
       </h2>
     </div>
     <p class="text-lg md:text-xl roboto">Our team is ready to solve your sewer problems efficiently and effectively.</p>
-    <SharedButton icon="true" text="Get Help Now" class="mx-auto mt-6 w-full md:w-max" />
+    <SharedButton icon="true" text="Get Help Now" class="mx-auto mt-6 w-full md:w-max" variant="call" />
   </div>
 </template>
 

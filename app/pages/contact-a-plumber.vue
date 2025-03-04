@@ -7,7 +7,7 @@
 
       <div class="flex flex-col gap-4 w-full">
         <!-- Call Button -->
-        <SharedButton icon="true" text="Call Now" class="w-full" />
+        <SharedButton icon="true" text="Call Now" class="w-full" variant="call" />
 
 
         <!-- Email Button -->
