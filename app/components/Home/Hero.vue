@@ -24,17 +24,19 @@ const scrollToSection = async () => {
         <Nuxt-img src="/primo-logo-gold-2.png" alt="Primo Sewer Cleaning" width="240" />
       </div>
       <div class="flex flex-col justify-center items-center md:items-start gap-6">
-        <div>
-          <p class="roboto-condensed uppercase border-white text-white/90  w-max">Serving
+        <div class="flex flex-col gap-0 text-center md:text-left">
+          <p class="roboto-condensed uppercase border-white text-white/90  w-full text-center md:text-left">
+            Serving
             Northeastern
             PA</p>
           <!-- H1 for larger screens hidden on smaller screens -->
           <h1 class="text-5xl md:text-6xl fancy leading-tight hidden md:block">Plumbing & Sewer Cleaning Services <br>
             You Can
             Trust</h1>
+
+          <!-- H1 for smaller screens hidden on larger screens -->
+          <h1 class="text-3xl fancy leading-snug md:hidden text-center">Plumbing & Sewer Services You Can Count On</h1>
         </div>
-        <!-- H1 for smaller screens hidden on larger screens -->
-        <h1 class="text-3xl fancy leading-snug md:hidden text-center">Plumbing & Sewer Services You Can Count On</h1>
         <div class="flex flex-row gap-4 w-full">
           <SharedButton icon="true" text="Call Now" class="w-full md:w-max" />
           <SharedButton @click="scrollToSection" class="hidden md:inline" text="Learn More" variant="ghost" />

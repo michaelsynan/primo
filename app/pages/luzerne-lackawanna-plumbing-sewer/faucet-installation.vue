@@ -3,7 +3,7 @@
 <template>
   <div class="flex flex-col justify-center gap-4 min-h-screen mx-auto px-4 py-30 md:py-40">
     <div class="max-w-4xl mx-auto">
-      <h1 class="text-3xl md:text-4xl fancy mb-4">Faucet Installation</h1>
+      <h1 class="text-3xl md:text-4xl fancy mb-4 text-center">Faucet Installation</h1>
       <NuxtImg src="/faucet-installation-plumber.webp" alt="Faucet Installation Service" placeholder
         class="h-80 object-cover object-top rounded w-full mb-6 border" />
       <p class="roboto text-xl leading-loose">
