@@ -13,8 +13,8 @@ export default defineNuxtConfig({
     head: {
       titleTemplate: "%s %separator %siteName",
       templateParams: {
-        separator: "—", // choose a separator
-        siteName: "Primo Sewer Cleaning", // set a site name
+        separator: "—",
+        siteName: "Primo Sewer Cleaning",
       },
     },
   },
@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     theme: {
       extend: {
         colors: {
-          primoGreen: "#008C45", // Custom primary color
+          primoGreen: "#008C45",
         },
       },
     },
