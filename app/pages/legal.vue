@@ -1,4 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Legal Disclaimer',
+  description: 'Read the legal disclaimer for Primo Sewer Cleaning. Learn about website terms, limitations of liability, and important disclaimers regarding our services and content.'
+})
+</script>
 
 <template>
   <div class="flex flex-col  gap-4 py-40 max-w-4xl mx-auto px-4">
@@ -15,8 +20,8 @@
       <p>Nothing on this website constitutes, or is meant to constitute, advice of any kind. If you require advice in
         relation to any legal, financial, or medical matter, you should consult an appropriate professional.</p>
     </div>
-    <div class="mt-4 w-max-content">
-      <SharedButton text="See Services" class="w-full md:w-max" inline />
+    <div class="mt-4 max-w-lg">
+      <SharedButton2 text="See Services" class="mr-auto mt-8 md:mt-10 md:w-min max-w-max" />
     </div>
   </div>
 </template>

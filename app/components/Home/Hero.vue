@@ -16,7 +16,7 @@ const scrollToSection = async () => {
 
 <template>
   <div :style="{ backgroundImage: 'url(/best-sewer-cleaning-primo.webp)' }"
-    class="border-b bg-fixed w-full px-4 md:px-0 bg-stone-950"
+    class="border-b bg-fixed w-full px-4 md:px-0 bg-stone-950 relative overflow-hidden"
     style="background-size: cover; background-position: center;">
     <div class="overlay"></div>
     <div class="grid md:grid-cols-2 grid-cols-1 gap-4 h-screen max-w-5xl mx-auto pt-[73px]">
@@ -59,7 +59,7 @@ const scrollToSection = async () => {
   background-color: rgba(0, 0, 0, 0.6);
   pointer-events: none;
   z-index: 0;
-  height: 110%;
+  height: 100%;
 }
 
 .grid {

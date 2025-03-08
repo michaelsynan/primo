@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Home of the Best',
+  description: 'Plumbing and Sewer Cleaning in NE Pennsylvania, Lakawana and Luzerne County',
+})
+
+</script>
 
 <template>
   <div>

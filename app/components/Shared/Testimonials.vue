@@ -9,7 +9,7 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   { name: 'Joanne Braun', text: 'These guys were great, came out the next day, and managed to figure out what turned out to be quite the clog. Throughout it all they were very polite and cleaned up after themselves. I would definitely recommend.', image: '/pic2.png', profession: 'Operations Manager', stars: 5 },
-  { name: 'Michelle Urso', text: 'They came within a few hours and we are so appreciative! They fixed our problem with our drainage pipe and they got us up and running again within a half an hour! they also put a clean out section in our drain pipe for the future!! They were very kind and professional!', image: '/pic1.png', profession: 'Videographer', stars: 5 },
+  { name: 'Michelle Urso', text: 'They came within a few hours and we are so appreciative! They fixed our problem with our drainage pipe and they got us up and running again within a half an hour! They were very kind and professional!', image: '/pic1.png', profession: 'Videographer', stars: 5 },
   { name: 'Wendy Miscavage', text: 'These plumbers that came out to Arbys restaurant was fantastic! They listened to what was going on and immediately got the job done. We will recommend them to everyone we know. Very professional and knowledgeable!', image: '/pic3.png', profession: 'Actress', stars: 5 },
 ]
 </script>

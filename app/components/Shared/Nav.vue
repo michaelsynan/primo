@@ -1,5 +1,5 @@
 <template>
-  <header class="border-b bg-stone-900 fixed w-full" ref="dropdownContainer">
+  <header class="border-b bg-stone-950 fixed w-full" ref="dropdownContainer">
     <div class="bg-primoRed text-center py-0.5 roboto-condensed cursor-pointer">
       <a href="tel:+15709058441" class="text-white" aria-label="Call Primo Sewer Cleaning at (570) 905-8441">
         Call Now • (570) 905-8441

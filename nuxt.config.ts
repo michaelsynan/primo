@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     head: {
       titleTemplate: "%s %separator %siteName",
       templateParams: {
-        separator: "—",
+        separator: "|",
         siteName: "Primo Sewer Cleaning",
       },
     },

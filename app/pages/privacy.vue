@@ -1,4 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Privacy Policy | Primo Sewer Cleaning',
+  description: 'Learn how Primo Sewer Cleaning collects, uses, and protects your personal information. Read our Privacy Policy for details on data collection, cookies, and third-party services.'
+})
+</script>
 
 <template>
   <div class="flex flex-col  gap-4 max-w-4xl mx-auto px-4 py-40">
@@ -39,7 +44,7 @@
       </ul>
     </div>
     <div class="mt-4">
-      <SharedButton text="See Services" class="max-w-content" inline />
+      <SharedButton2 text="See Services" class="mx-auto mt-8 md:mt-10 w-full md:w-max" inline />
     </div>
   </div>
 </template>

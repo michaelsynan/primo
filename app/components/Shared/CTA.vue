@@ -2,24 +2,26 @@
 
 <template>
   <div
-    class="max-w-4xl mx-auto w-full rounded border-2 bg-primoBrown/20 text-primoWhite text-center py-10 md:py-12 md:py-18 my-10 flex flex-col gap-6 md:gap-8 px-8">
-    <div class="hidden md:block">
-      <h2 class="text-2xl md:text-3xl font-bold roboto">
+    class="max-w-4xl mx-auto w-full rounded-sm border bg-stone-800/80 text-primoWhite text-center py-10 md:py-12 my-10 flex flex-col gap-5 md:gap-6 px-8">
 
-        Need Immediate Help?
-        <span class="underline-thick">Give Us a Call.</span>
+    <div class="hidden md:block">
+      <h2 class="text-2xl md:text-3xl font-bold roboto leading-tight">
+        Need Immediate Help? Call Now.
       </h2>
     </div>
-    <div class="block md:hidden">
-      <h2 class="text-2xl md:text-3xl font-bold leading-relaxed">
 
-        Need Immediate Help?<div class="mt-2">
-          <span class="underline-thick mt-10 text-2xl md:text-3xl">Give Us a Call.</span>
+    <div class="block md:hidden">
+      <h2 class="text-2xl md:text-3xl font-bold leading-tight">
+        Need Immediate Help?<div class="block pt-4"> Call Now.
         </div>
       </h2>
     </div>
-    <p class="text-lg md:text-xl roboto">Our team is ready to solve your sewer problems efficiently and effectively.</p>
-    <SharedButton icon="true" text="Get Help Now" class="mx-auto mt-6 w-full md:w-max" variant="call" />
+
+    <p class="text-lg md:text-xl roboto mt-2 md:mt-4">
+      Our team is ready to solve your sewer problems efficiently and effectively.
+    </p>
+
+    <SharedButton icon="true" text="Get Help Now" class="mx-auto mt-8 md:mt-10 w-full md:w-max" variant="call" />
   </div>
 </template>
 

@@ -1,14 +1,8 @@
 <script setup>
-const title = ref('Loading...')
-
-useHead({
-  // computed getter syntax
-  title: () => `${title.value} - Plumber and Sewer Services in NE Pennsylvania`
-})
 
 useSeoMeta({
-  title: 'Primo Sewer Cleaning',
-  description: 'Plumbing and Sewer Cleaning in NE Pennsylvania, Lakawana and Luzerne County',
+  title: 'Plumbing Experts in Northeastern PA',
+  description: 'Primo Sewer Cleaning offers trusted plumbing and sewer services in Northeastern PA, including Luzerne & Lackawanna County. Drain cleaning, water heater repair, and more!',
 })
 
 </script>

@@ -1,3 +1,10 @@
+<script setup>
+useSeoMeta({
+  title: 'Home of the Best',
+  description: 'Plumbing and Sewer Cleaning in NE Pennsylvania, Lakawana and Luzerne County',
+})
+
+</script>
 <template>
   <div class="flex flex-col justify-center gap-4 min-h-screen mx-auto px-4 py-40">
 
@@ -19,10 +26,10 @@
         <SharedButton variant="whatsapp" icon="false" text="WhatsApp" class="w-full" />
 
         <!-- Address (if needed) -->
-        <div class="bg-[var(--color-primoBrown)] p-4 rounded-lg">
+        <!-- <div class="bg-[var(--color-primoBrown)] p-4 rounded-lg">
           <p class="text-[var(--color-primoWhite)] font-semibold">📍 Our Service Area:</p>
           <p class="text-[var(--color-primoWhite)]">Lurz</p>
-        </div>
+        </div> -->
       </div>
     </section>
   </div>

@@ -14,7 +14,7 @@ const servicesData = [
   },
   {
     icon: '/pipe.svg',
-    header: 'Sewer & Drain Cleaning & Repairs',
+    header: 'Sewer & Drain Services',
     description: 'Have your line cleaned to remove roots and clogs before a messy backup occurs. We will fix all your internal & external underground pipe repairs caused by cracks and corrosion.',
     link: '/sewer-drain-cleaning-repair'
   },
@@ -26,7 +26,7 @@ const servicesData = [
   },
   {
     icon: '/worker.svg',
-    header: 'Water Heater Repair & Replacement',
+    header: 'Water Heater Services',
     description: 'Your water heater plays a critical role in your home. It provides you with the hot water you need to shower, wash dishes, and much more!',
     link: '/water-heater-repair-replacement'
   },
@@ -43,15 +43,15 @@ const servicesData = [
   <div class="border-b w-full py-20 md:py-32 flex flex-col gap-10 px-4 md:px-0">
 
     <div id="our-services" :style="{ backgroundImage: 'url(/plumber.jpg)' }"
-      class="border border-primoGrey w-full max-w-5xl mx-auto flex justify-center items-center h-[280px] md:h-[400px] bg-cover rounded relative">
+      class="border border-primoGrey w-full max-w-7xl mx-auto flex justify-center items-center h-[280px] md:h-[400px] bg-cover rounded relative">
       <div class="overlay"></div>
       <h2 class="fancy text-4xl z-10 relative">Our Services</h2>
     </div>
 
-    <div class="grid md:grid-cols-2 grid-cols-1 gap-6 md:gap-8 max-w-5xl mx-auto">
+    <div class="grid md:grid-cols-3 grid-cols-1 gap-6 md:gap-8 max-w-7xl mx-auto">
       <HomeService v-for="service in servicesData" :key="service.header" :icon="service.icon" :header="service.header"
         :description="service.description" :link="service.link"
-        class="bg-stone-900/50 p-8 rounded-md border-primoGrey hover:border-stone-200 transition-all ease duration-300 border" />
+        class="bg-stone-900/50 p-8 rounded-md border-stone-900 hover:border-stone-400 transition-all ease duration-300 border" />
     </div>
 
   </div>
