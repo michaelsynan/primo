@@ -36,7 +36,7 @@ onUnmounted(() => {
 <style scoped>
 .shared-nav {
   z-index: 100;
-  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.20s;
   transform: translateY(0%);
   opacity: 1;
 }
@@ -48,7 +48,7 @@ onUnmounted(() => {
 
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.3s;
+  transition: opacity 0.20s;
 }
 
 .page-enter,

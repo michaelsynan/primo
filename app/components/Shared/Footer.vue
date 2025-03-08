@@ -2,7 +2,7 @@
 
 <template>
   <div class="border-t py-2 bg-stone-950">
-    <div class="flex flex-col md:flex-row gap-4 justify-between max-w-5xl mx-auto py-8 pb-10 px-4 md:px-0">
+    <div class="flex flex-col md:flex-row gap-4 justify-between max-w-7xl mx-auto py-8 pb-10 px-4 md:px-0 ">
       <div class="flex flex-col md:flex-row gap-12 items-center md:items-start">
         <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-16">
           <div>

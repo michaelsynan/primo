@@ -20,7 +20,7 @@ const backgroundStyles = computed(() => {
 </script>
 
 <template>
-  <div class="flex flex-col justify-center gap-4 min-h-screen mx-auto pb-20 bg-stone-900">
+  <div class="flex flex-col justify-center gap-4 min-h-screen mx-auto pb-20 bg-stone-950">
     <div id="header-div"
       class="relative w-full h-80 md:h-96 rounded overflow-hidden flex items-center justify-center text-white text-center px-4 mt-[74px] border-b border-stone-600"
       :style="backgroundStyles">
