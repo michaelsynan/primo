@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+  site: { url: "https://primosewercleaning.com", name: "Primo Sewer Cleaning" },
   app: {
     head: {
       titleTemplate: "%s %separator %siteName",
