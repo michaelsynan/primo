@@ -2,14 +2,13 @@
   <NuxtLink :to="variant === 'email' ? `mailto:${link}`
     : variant === 'whatsapp' ? `https://wa.me/${link}`
       : variant === 'call' ? `tel:570-905-8441 `
-        : link" class="w-full min-w-max">
-
-    <button class="roboto flex items-center justify-center w-full min-w-max" :class="buttonClass">
-      <UIcon v-if="icon && variant === 'email'" name="i-mdi-email" class="w-4 h-4 mr-2" />
-      <UIcon v-else-if="icon && variant === 'whatsapp'" name="i-mdi-whatsapp" class="w-4 h-4 mr-2" />
-      <UIcon v-else-if="icon" name="i-mdi-phone" class="w-4 h-4 mr-2" />
-      {{ props.text }}
-    </button>
+        : link"
+    class="roboto flex items-center justify-center w-full min-w-max text-base border hover:border-primoGreen/80 hover:bg-primoGreen/80 rounded cursor-pointer"
+    :class="buttonClass" role="button">
+    <UIcon v-if="icon && variant === 'email'" name="i-mdi-email" class="w-4 h-4 mr-2" />
+    <UIcon v-else-if="icon && variant === 'whatsapp'" name="i-mdi-whatsapp" class="w-4 h-4 mr-2" />
+    <UIcon v-else-if="icon" name="i-mdi-phone" class="w-4 h-4 mr-2" />
+    {{ props.text }}
   </NuxtLink>
 </template>
 

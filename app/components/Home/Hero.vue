@@ -1,4 +1,5 @@
 <script setup>
+import { nextTick } from 'vue';
 
 const scrollToSection = async () => {
   await nextTick(); // Ensure the DOM is ready
@@ -10,6 +11,10 @@ const scrollToSection = async () => {
       top: top - 20, // Adjust for any fixed headers
       behavior: "smooth",
     });
+
+    // Focus on the target element for screen readers
+    target.setAttribute("tabindex", "-1"); // Make the element focusable
+    target.focus();
   }
 };
 </script>
@@ -40,14 +45,12 @@ const scrollToSection = async () => {
         <div class="flex flex-row gap-4 w-full">
           <SharedButton icon="true" text="Call Now" class="w-full md:w-max" link="631-942-0582" variant="call" />
           <SharedButton @click="scrollToSection" class="hidden md:inline w-full md:w-max" text="Learn More"
-            variant="ghost" />
-
+            variant="ghost" aria-label="Scroll to Services" />
         </div>
       </div>
     </div>
   </div>
 </template>
-
 
 <style scoped>
 .overlay {
