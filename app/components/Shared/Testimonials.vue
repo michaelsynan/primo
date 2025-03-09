@@ -18,7 +18,7 @@ const testimonials: Testimonial[] = [
   <div class="w-full bg-juju-950 border-b border-stone-500 py-20">
     <UContainer class="relative flex flex-col justify-center items-center w-full h-auto md:min-h-[600px] my-8 gap-4">
       <div class="text-center w-full flex flex-col justify-center items-center mb-12">
-        <h2 class="text-3xl font-bold pb-6 fancy">What They're Saying</h2>
+        <h2 class="text-3xl font-bold pb-6 fancy">Here From Our Clients</h2>
         <div class="flex justify-center w-full">
           <SharedGoogleReview class="max-w-screen-sm" />
         </div>
