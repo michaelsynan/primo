@@ -37,23 +37,6 @@
 import { ref, onMounted, onUnmounted, watch, computed } from 'vue'
 import { useRoute } from 'vue-router'
 
-useSeoMeta({
-  title: 'Expert Faucet Installation',
-  description: 'Upgrade your kitchen or bathroom with professional faucet installation in NE Pennsylvania. We handle all styles for homes and businesses. Call today!',
-})
-
-const img = useImage()
-
-const backgroundStyles = computed(() => {
-  const imgUrl = img('faucet-installation-pennsylvania.webp')
-  return {
-    backgroundImage: `url('${imgUrl}')`,
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundPosition: 'right center'
-  }
-})
-
 const showDropdown = ref(false)
 const dropdownContainer = ref(null)
 const dropdownButton = ref(null)
@@ -71,14 +54,12 @@ const handleClickOutside = event => {
 }
 
 const handleKeyDown = (event) => {
-  // Close dropdown on Escape key
   if (event.key === 'Escape' && showDropdown.value) {
     showDropdown.value = false
   }
 }
 
 const handleFocusOut = (event) => {
-  // Check if the new focused element is outside our dropdown container
   if (showDropdown.value &&
     menuContainer.value &&
     !menuContainer.value.contains(event.relatedTarget) &&
@@ -87,7 +68,6 @@ const handleFocusOut = (event) => {
   }
 }
 
-// Close dropdown when route changes
 watch(route, () => {
   showDropdown.value = false
 })

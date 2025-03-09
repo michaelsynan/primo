@@ -7,7 +7,7 @@ useSeoMeta({
 
 </script>
 <template>
-  <main class="flex flex-col items-center justify-center">
+  <main id="main-content" class="flex flex-col items-center justify-center">
     <HomeHero />
     <LazyHomeServices />
     <SharedTestimonials />

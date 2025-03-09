@@ -1,4 +1,10 @@
 <template>
+  <a href="#main-content"
+    class="sr-only z-10 focus:not-sr-only focus:block focus:bg-white focus:text-black focus:p-2 focus:z-50 focus:fixed focus:top-2 focus:left-2">
+    Skip to main content
+  </a>
+
+
   <UApp>
     <SharedNav class="fixed w-full shared-nav" :class="{ 'nav-hidden': !showNavbar }" />
     <Transition name="page" mode="out-in">
