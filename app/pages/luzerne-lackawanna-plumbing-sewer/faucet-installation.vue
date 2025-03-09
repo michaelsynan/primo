@@ -9,8 +9,13 @@ useSeoMeta({
 const img = useImage()
 
 const backgroundStyles = computed(() => {
-  const imgUrl = img('faucet-installation-plumber.webp')
-  return { backgroundImage: `url('${imgUrl}')` }
+  const imgUrl = img('faucet-installation-pennsylvania.webp')
+  return {
+    backgroundImage: `url('${imgUrl}')`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'right center'
+  }
 })
 </script>
 

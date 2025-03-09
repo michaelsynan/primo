@@ -21,7 +21,7 @@ useSeoMeta({
         relation to any legal, financial, or medical matter, you should consult an appropriate professional.</p>
     </div>
     <div class="mt-4 max-w-lg">
-      <SharedButton2 text="See Services" class="mr-auto mt-8 md:mt-10 md:w-min max-w-max" />
+      <SharedButton2 text="Back to Home" class="mx-auto mt-8 md:mt-10 w-full md:w-max" to="/" inline />
     </div>
   </div>
 </template>

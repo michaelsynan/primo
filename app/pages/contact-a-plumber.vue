@@ -18,7 +18,7 @@ useSeoMeta({
 
 
         <!-- Email Button -->
-        <SharedButton to="'mailto:primosewercleaning@gmail.com'" variant="email" icon="false" text="Email Us"
+        <SharedButton to="mailto:primosewercleaning@gmail.com" variant="email" icon="false" text="Email Us"
           class="w-full" />
 
 

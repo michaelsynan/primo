@@ -22,7 +22,8 @@ defineProps({
     </div>
 
     <div class="text-right ml-auto mt-4 group relative">
-      <NuxtLink :to="'/luzerne-lackawanna-plumbing-sewer' + link" class="text-sm flex flex-row items-center gap-1">
+      <NuxtLink :to="'/luzerne-lackawanna-plumbing-sewer' + link" class="text-sm flex flex-row items-center gap-1"
+        :aria-label="`Learn more about ${header} services`">
         Learn More
         <div class="group-hover:translate-x-1.5 transition-transform duration-200">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">

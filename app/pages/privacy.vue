@@ -44,7 +44,7 @@ useSeoMeta({
       </ul>
     </div>
     <div class="mt-4">
-      <SharedButton2 text="See Services" class="mx-auto mt-8 md:mt-10 w-full md:w-max" inline />
+      <SharedButton2 text="Back to Home" class="mx-auto mt-8 md:mt-10 w-full md:w-max" to="/" inline />
     </div>
   </div>
 </template>

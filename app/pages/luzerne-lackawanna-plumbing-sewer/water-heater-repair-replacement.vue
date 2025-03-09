@@ -14,7 +14,7 @@ const backgroundStyles = computed(() => {
     backgroundImage: `url('${imgUrl}')`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    backgroundPosition: 'center top'
+    backgroundPosition: 'right center'
   }
 })
 </script>

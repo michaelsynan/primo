@@ -1,7 +1,8 @@
 <template>
-  <header class="border-b bg-stone-950 fixed w-full" ref="dropdownContainer">
+  <header class="border-b bg-stone-950 fixed w-full z-50" ref="dropdownContainer">
     <div class="bg-primoRed text-center py-0.5 roboto-condensed cursor-pointer">
-      <a href="tel:+15709058441" class="text-white" aria-label="Call Primo Sewer Cleaning at (570) 905-8441">
+      <a href="tel:+15709058441" target="_blank" class="text-white"
+        aria-label="Call Primo Sewer Cleaning at (570) 905-8441">
         Call Now • (570) 905-8441
       </a>
     </div>
@@ -10,9 +11,10 @@
         <NuxtLink to="/">PRIMO SEWER CLEANING</NuxtLink>
       </div>
       <nav>
-        <button @click="toggleDropdown" @click.stop
-          class="absolute right-0 top-0 h-full flex items-center justify-center px-4 md:px-8 border-l fancy text-lg md:text-xl tracking-wide cursor-pointer"
-          aria-haspopup="menu" :aria-expanded="showDropdown.toString()" aria-controls="services-menu">
+        <button @click="toggleDropdown" @keydown.enter.prevent="toggleDropdown" @keydown.space.prevent="toggleDropdown"
+          @keydown.escape="showDropdown = false" ref="dropdownButton"
+          class="absolute right-0 top-0 h-full flex items-center justify-center px-4 md:px-8 border-l fancy text-lg md:text-xl tracking-wide cursor-pointer focus:outline-none focus:ring-2 focus:ring-primoGreen"
+          aria-haspopup="true" :aria-expanded="showDropdown" aria-controls="services-menu">
           <div class="flex flex-row gap-3">
             <span>Services</span>
             <img class="transition-all duration-300" :class="{ 'rotate-180': showDropdown }" src="/chevron-thin.svg"
@@ -22,21 +24,40 @@
       </nav>
     </div>
     <transition name="fade">
-      <nav v-show="showDropdown" id="services-menu" role="menu"
-        class="absolute w-full md:w-[400px] top-full right-0 border p-4 md:p-5 bg-stone-950 border-l-0 md:border-l border-r-0">
+      <div v-show="showDropdown" id="services-menu" role="menu" ref="menuContainer" @focusout="handleFocusOut"
+        class="absolute w-full md:w-[400px] top-full right-0 border p-4 md:p-5 bg-stone-950 border-l-0 md:border-l border-r-0"
+        @keydown.escape="showDropdown = false">
         <SharedNavDropdown />
-      </nav>
+      </div>
     </transition>
   </header>
 </template>
 
-
-<script setup>
-import { ref, onMounted, onUnmounted, watch } from 'vue'
+<script setup lang="ts">
+import { ref, onMounted, onUnmounted, watch, computed } from 'vue'
 import { useRoute } from 'vue-router'
+
+useSeoMeta({
+  title: 'Expert Faucet Installation',
+  description: 'Upgrade your kitchen or bathroom with professional faucet installation in NE Pennsylvania. We handle all styles for homes and businesses. Call today!',
+})
+
+const img = useImage()
+
+const backgroundStyles = computed(() => {
+  const imgUrl = img('faucet-installation-pennsylvania.webp')
+  return {
+    backgroundImage: `url('${imgUrl}')`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'right center'
+  }
+})
 
 const showDropdown = ref(false)
 const dropdownContainer = ref(null)
+const dropdownButton = ref(null)
+const menuContainer = ref(null)
 const route = useRoute()
 
 const toggleDropdown = () => {
@@ -44,21 +65,41 @@ const toggleDropdown = () => {
 }
 
 const handleClickOutside = event => {
-  if (!dropdownContainer.value.contains(event.target)) {
+  if (dropdownContainer.value && !dropdownContainer.value.contains(event.target)) {
     showDropdown.value = false
   }
 }
 
+const handleKeyDown = (event) => {
+  // Close dropdown on Escape key
+  if (event.key === 'Escape' && showDropdown.value) {
+    showDropdown.value = false
+  }
+}
+
+const handleFocusOut = (event) => {
+  // Check if the new focused element is outside our dropdown container
+  if (showDropdown.value &&
+    menuContainer.value &&
+    !menuContainer.value.contains(event.relatedTarget) &&
+    event.relatedTarget !== dropdownButton.value) {
+    showDropdown.value = false
+  }
+}
+
+// Close dropdown when route changes
 watch(route, () => {
   showDropdown.value = false
 })
 
 onMounted(() => {
   window.addEventListener('click', handleClickOutside)
+  window.addEventListener('keydown', handleKeyDown)
 })
 
 onUnmounted(() => {
   window.removeEventListener('click', handleClickOutside)
+  window.removeEventListener('keydown', handleKeyDown)
 })
 </script>
 
