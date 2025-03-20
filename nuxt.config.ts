@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ["@nuxt/ui", "@nuxt/eslint", "@nuxt/image", "@nuxtjs/leaflet", "@nuxt/scripts"],
+  modules: [
+    "@nuxt/ui",
+    "@nuxt/eslint",
+    "@nuxt/image",
+    "@nuxtjs/leaflet",
+    "@nuxt/scripts",
+  ],
 
   css: ["~/assets/css/main.css"],
 
@@ -44,6 +50,13 @@ export default defineNuxtConfig({
   seo: {
     meta: {
       description: "Sewer and Plumber in  Lackawanna & Luzerne County",
+    },
+  },
+  scripts: {
+    registry: {
+      googleAnalytics: {
+        id: "G-5SYL9K88YT",
+      },
     },
   },
 
