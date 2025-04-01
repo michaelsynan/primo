@@ -65,7 +65,9 @@ const backgroundStyles = computed(() => {
           <li><strong>Rooter and Drain Cleaning:</strong> We use state-of-the-art tools to clear clogs and restore your
             sewer lines to full functionality.</li>
           <li><strong>Hydrojetting:</strong> High-pressure water jets clean out stubborn debris, grease, and tree roots,
-            preventing future problems.</li>
+            preventing future problems. <NuxtLink to='/luzerne-lackawanna-plumbing-sewer/high-pressure-water-jetting/'>
+              Learn more about our hydrojetting services.</NuxtLink>
+          </li>
           <li><strong>Pipe Repair and Replacement:</strong> If pipes are broken or severely damaged, we offer repair or
             trenchless replacement options to restore your system.</li>
           <li><strong>Video Camera Inspection:</strong> We use video cameras to identify the exact cause and location of

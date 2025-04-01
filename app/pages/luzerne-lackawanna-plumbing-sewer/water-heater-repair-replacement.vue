@@ -78,9 +78,6 @@ const backgroundStyles = computed(() => {
         <ul class="list-disc pl-5 space-y-2 text-lg">
           <li><strong>Traditional Tank Water Heaters:</strong> We repair and replace standard tank models, ensuring a
             reliable supply of hot water.</li>
-          <li><strong>Tankless Water Heaters:</strong> Our team specializes in servicing modern, energy-efficient
-            tankless
-            water heaters for continuous hot water.</li>
           <li><strong>Gas & Electric Water Heaters:</strong> Whether your heater is gas-powered or electric, we have the
             expertise to handle both types efficiently.</li>
         </ul>

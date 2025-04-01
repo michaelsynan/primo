@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/leaflet",
     "@nuxt/scripts",
+    "nuxt-og-image",
   ],
 
   css: ["~/assets/css/main.css"],

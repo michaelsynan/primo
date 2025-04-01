@@ -25,6 +25,8 @@
     "@vue-leaflet/vue-leaflet": "^0.10.1",
     "leaflet": "^1.9.4",
     "nuxt": "^3.16.1",
+    "nuxt-og-image": "5.1.1",
+    "unstorage": "^1.0.0",
     "vue-leaflet": "^0.1.0"
   },
   "devDependencies": {

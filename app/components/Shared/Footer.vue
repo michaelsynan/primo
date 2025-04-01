@@ -22,6 +22,10 @@
       </div>
       <div class="flex flex-col items-end text-right">
         <div class="flex flex-row gap-4 w-full mx-auto justify-center md:justify-end mt-6 md:mt-0">
+          <Nuxt-link to="https://www.facebook.com/Primosewercleaning" target="_blank"
+            aria-label="Follow Primo Sewer Cleaning on Facebook">
+            <UIcon name="i-mdi-facebook" class="w-8 h-8" aria-hidden="true" />
+          </Nuxt-link>
           <Nuxt-link to="https://www.yelp.com/biz/primo-sewer-cleaning-dickson-city" target="_blank"
             aria-label="Read Primo Sewer Cleaning reviews on Yelp">
             <UIcon name="i-mdi-yelp" class="w-8 h-8" aria-hidden="true" />

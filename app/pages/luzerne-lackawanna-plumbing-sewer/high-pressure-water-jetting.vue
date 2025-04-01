@@ -67,7 +67,10 @@ const backgroundStyles = computed(() => {
           <li><strong>Water Jetting:</strong> Our technicians use specialized high-pressure water jets to clear clogs,
             remove debris, and clean the inside of your pipes.</li>
           <li><strong>Cleaning:</strong> The high-pressure water effectively removes grease, tree roots, and sediment
-            buildup, restoring full pipe capacity.</li>
+            buildup, restoring full pipe capacity. <NuxtLink
+              to='/luzerne-lackawanna-plumbing-sewer/sewer-drain-cleaning-repair/'>
+              Learn more about our sewer cleaning services.</NuxtLink>
+          </li>
           <li><strong>Post-Inspection:</strong> After cleaning, we conduct a second inspection to ensure all blockages
             have been cleared and your pipes are functioning properly.</li>
         </ul>
