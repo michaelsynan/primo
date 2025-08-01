@@ -8,7 +8,7 @@
       <p class="text-stone-300 text-lg">Get in touch with us for plumbing services near you.</p>
 
       <div class="flex flex-col gap-4 w-full">
-        <SharedButton icon="true" text="Call Now" class="w-full" variant="call" />
+        <SharedButton :icon="true" text="Call Now" class="w-full" variant="call" />
 
         <SharedButton to="mailto:primosewercleaning@gmail.com" variant="email" icon="false" text="Email Us"
           class="w-full" />

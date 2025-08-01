@@ -21,12 +21,12 @@ useSeoMeta({
       </p>
 
       <div class="flex flex-col gap-4 w-full mt-8">
-        <SharedButton icon="true" text="Call Now for Emergency Service" class="w-full" variant="call" />
+        <SharedButton :icon="true" text="Call Now for Emergency Service" class="w-full" variant="call" />
 
-        <SharedButton to="mailto:primosewercleaning@gmail.com" variant="email" icon="true" text="Email Us"
+        <SharedButton to="mailto:primosewercleaning@gmail.com" variant="email" :icon="true" text="Email Us"
           class="w-full" />
 
-        <SharedButton variant="whatsapp" icon="true" text="Message on WhatsApp" class="w-full" />
+        <SharedButton variant="whatsapp" :icon="true" text="Message on WhatsApp" class="w-full" />
       </div>
 
       <div class="border-t border-stone-700 pt-6 mt-8">

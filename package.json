@@ -12,8 +12,8 @@
     "lint:fix": "eslint --fix ."
   },
   "dependencies": {
-    "@iconify-json/lucide": "^1.2.22",
-    "@iconify-json/simple-icons": "^1.2.19",
+    "@iconify-json/lucide": "^1.2.31",
+    "@iconify-json/simple-icons": "^1.2.29",
     "@nuxt/fonts": "0.10.3",
     "@nuxt/image": "1.9.0",
     "@nuxt/scripts": "0.11.2",
@@ -21,19 +21,20 @@
     "@nuxtjs/leaflet": "1.2.6",
     "@nuxtjs/seo": "2.2.0",
     "@nuxtjs/sitemap": "7.2.7",
-    "@unhead/vue": "^2.0.0-rc.8",
+    "@unhead/vue": "2.0.0-rc.13",
     "@vue-leaflet/vue-leaflet": "^0.10.1",
     "leaflet": "^1.9.4",
     "nuxt": "^4.0.2",
     "nuxt-og-image": "5.1.1",
-    "unstorage": "^1.0.0",
+    "unstorage": "^1.15.0",
     "vue-leaflet": "^0.1.0"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "^1.2.3",
     "@nuxt/devtools": "latest",
-    "@nuxt/eslint": "^0.7.5",
-    "eslint": "^9.17.0",
-    "typescript": "^5.7.3"
+    "@nuxt/eslint": "^0.7.6",
+    "eslint": "^9.22.0",
+    "typescript": "^5.8.2"
   },
   "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387"
 }

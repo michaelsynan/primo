@@ -43,7 +43,7 @@ const scrollToSection = async () => {
           <h1 class="text-3xl fancy leading-snug md:hidden text-center">Plumbing & Sewer Services You Can Count On</h1>
         </div>
         <div class="flex flex-row gap-4 w-full">
-          <SharedButton icon="true" text="Call Now" class="w-full md:w-max" link="631-942-0582" variant="call" />
+          <SharedButton :icon="true" text="Call Now" class="w-full md:w-max" link="631-942-0582" variant="call" />
           <SharedButton @click="scrollToSection" class="hidden md:inline w-full md:w-max" text="Learn More"
             variant="ghost" aria-label="Scroll to Services" />
         </div>
