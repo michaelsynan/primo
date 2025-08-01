@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/leaflet",
     "@nuxt/scripts",
     "nuxt-og-image",
+    "@nuxtjs/seo",
   ],
 
   css: ["~/assets/css/main.css"],
@@ -16,27 +17,22 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  site: { url: "https://primosewercleaning.com", name: "Primo Sewer Cleaning" },
+
+  site: {
+    url: "https://primosewercleaning.com",
+    name: "Primo Sewer Cleaning",
+    description:
+      "Expert plumbing and sewer services in Northeastern PA, including Luzerne & Lackawanna County. Drain cleaning, water heater repair, and more!",
+  },
+
   app: {
     head: {
-      titleTemplate: "%s %separator %siteName",
-      templateParams: {
-        separator: "|",
-        siteName: "Primo Sewer Cleaning",
-      },
+      titleTemplate: "%s | Primo Sewer Cleaning",
     },
-    scrollBehavior(to, from, savedPosition) {
-      if (savedPosition) {
-        return savedPosition;
-      } else if (to.hash) {
-        return {
-          el: to.hash,
-          behavior: "smooth",
-        };
-      } else {
-        return { top: 0, behavior: "smooth" };
-      }
-    },
+  },
+
+  seo: {
+    redirectToCanonicalSiteUrl: true,
   },
 
   tailwindcss: {
@@ -48,11 +44,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  seo: {
-    meta: {
-      description: "Sewer and Plumber in  Lackawanna & Luzerne County",
-    },
-  },
+
   scripts: {
     registry: {
       googleAnalytics: {

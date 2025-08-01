@@ -1,5 +1,6 @@
 export default defineAppConfig({
   // https://ui3.nuxt.dev/getting-started/theme#design-system
+  siteName: "Primo Sewer Cleaning",
   ui: {
     colors: {
       primary: 'emerald',

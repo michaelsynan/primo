@@ -1,8 +1,4 @@
 <script setup>
-useSeoMeta({
-  title: 'Find a Plumber in Northeastern PA',
-  description: 'Contact our plumbing experts at Primo Sewer Cleaning serving Northeastern PA, including Luzerne & Lackawanna County. Reach out for emergency service, free quotes, and reliable plumbing solutions.',
-})
 </script>
 
 <template>
