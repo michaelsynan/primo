@@ -50,7 +50,7 @@ const backgroundStyles = computed(() => {
 
         <div class="px-4 md:px-0">
             <div class="max-w-4xl mx-auto">
-                <p class="roboto text-xl leading-loose mt-6">
+                <p class="roboto text-xl md:text-2xl leading-loose mt-6">
                     {{ location.seoDescription }}
                 </p>
 
