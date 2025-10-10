@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 
 useSeoMeta({
-  title: 'Sewer Diagnosis & Inspection Services',
+  title: 'BEST Sewer Diagnosis & Inspection Services',
   description: 'Primo Sewer Cleaning offers expert sewer diagnosis and inspection services in NE Pennsylvania, including Lackawanna and Luzerne County. Our services include identifying water backups, gurgling sounds, odors, and tree root intrusions. Contact us for professional and reliable sewer solutions.'
 })
 

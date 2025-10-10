@@ -37,7 +37,7 @@ useHead({
 
 const showNavbar = ref(true);
 let lastScrollTop = 0;
-// defineOgImage({ url: 'primo-og.png' })
+
 const handleScroll = () => {
   const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
   if (currentScroll > lastScrollTop && currentScroll > 50) { // Check added to avoid hiding on very small scrolls

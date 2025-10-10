@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 
 useSeoMeta({
-  title: 'High Pressure Water Jetting',
+  title: 'BEST High Pressure Water Jetting',
   description: 'Clear tough clogs with high pressure water jetting. Safe, efficient, and eco-friendly sewer line cleaning in NE Pennsylvania. Call today!',
 })
 

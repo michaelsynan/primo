@@ -5,15 +5,7 @@ import { services } from "./app/data/services";
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: [
-    "@nuxt/ui",
-    "@nuxt/eslint",
-    "@nuxt/image",
-    "@nuxtjs/leaflet",
-    "@nuxt/scripts",
-    "nuxt-og-image",
-    "@nuxtjs/seo",
-  ],
+  modules: ["@nuxt/ui", "@nuxt/eslint", "@nuxt/image", "@nuxtjs/leaflet", "@nuxt/scripts", "nuxt-og-image", "@nuxtjs/seo", "nuxt-schema-org"],
 
   css: ["~/assets/css/main.css"],
 

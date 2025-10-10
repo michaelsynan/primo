@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 
 useSeoMeta({
-  title: 'Expert Faucet Installation',
+  title: 'BEST Expert Faucet Installation',
   description: 'Upgrade your kitchen or bathroom with professional faucet installation in NE Pennsylvania. We handle all styles for homes and businesses. Call today!',
 })
 

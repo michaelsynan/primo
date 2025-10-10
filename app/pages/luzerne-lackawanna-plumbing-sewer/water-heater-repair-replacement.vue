@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 
 useSeoMeta({
-  title: 'Expert Water Heater Repair & Replacement in Northeastern PA',
+  title: 'BEST Expert Water Heater Repair & Replacement in Northeastern PA',
   description: 'Primo Sewer Cleaning offers reliable water heater repair, replacement, and maintenance services in Northeastern PA, including Luzerne and Lackawanna County. Our expert technicians ensure hot water reliability with fast, affordable solutions. Call today for service!'
 })
 
