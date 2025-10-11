@@ -15,8 +15,8 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
 
+import { ref, onMounted, onUnmounted } from 'vue';
 // Google Analytics setup
 useHead({
   script: [
@@ -34,6 +34,25 @@ useHead({
     }
   ]
 });
+
+// Organization structured data
+// defineOrganization({
+//   name: 'Primo Plumbing & Sewer Cleaning',
+//   logo: '/primo-logo-white.png',
+//   url: 'https://primosewercleaning.com',
+//   sameAs: [
+//     'https://www.facebook.com/primosewercleaning',
+//     'https://www.instagram.com/primosewercleaning/'
+//   ],
+//   contactPoint: [
+//     {
+//       telephone: '+1-570-905-8441',
+//       contactType: 'customer service',
+//       areaServed: 'Luzerne County, Lackawanna County, Pennsylvania',
+//       availableLanguage: ['English']
+//     }
+//   ]
+// });
 
 const showNavbar = ref(true);
 let lastScrollTop = 0;

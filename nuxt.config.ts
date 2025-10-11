@@ -5,7 +5,15 @@ import { services } from "./app/data/services";
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ["@nuxt/ui", "@nuxt/eslint", "@nuxt/image", "@nuxtjs/leaflet", "@nuxt/scripts", "nuxt-og-image", "@nuxtjs/seo", "nuxt-schema-org"],
+  modules: [
+    "@nuxt/ui",
+    "@nuxt/eslint",
+    "@nuxt/image",
+    "@nuxtjs/leaflet",
+    "@nuxt/scripts",
+    "nuxt-og-image",
+    "@nuxtjs/seo",
+  ],
 
   css: ["~/assets/css/main.css"],
 
@@ -118,4 +126,27 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: "2024-11-27",
+
+  schemaOrg: {
+    identity: {
+      "@type": "Organization",
+      name: "Primo Plumbing & Sewer Cleaning",
+      url: "https://primosewercleaning.com",
+      logo: "/primo-logo-white.png",
+      description:
+        "Expert plumbing and sewer services in Northeastern PA, including Luzerne & Lackawanna County. Drain cleaning, water heater repair, and more!",
+      sameAs: [
+        "https://www.facebook.com/primosewercleaning",
+        "https://www.instagram.com/primosewercleaning/",
+      ],
+      contactPoint: [
+        {
+          telephone: "+1-570-905-8441",
+          contactType: "customer service",
+          areaServed: "Luzerne County, Lackawanna County, Pennsylvania",
+          availableLanguage: ["English"],
+        },
+      ],
+    },
+  },
 });
