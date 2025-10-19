@@ -132,7 +132,7 @@ export default defineNuxtConfig({
       "@type": "Organization",
       name: "Primo Plumbing & Sewer Cleaning",
       url: "https://primosewercleaning.com",
-      logo: "/primo-logo-white.png",
+      logo: "https://primosewercleaning.com/primo-sewer-cleaning.png",
       description:
         "Expert plumbing and sewer services in Northeastern PA, including Luzerne & Lackawanna County. Drain cleaning, water heater repair, and more!",
       sameAs: [
