@@ -37,9 +37,9 @@ export default defineNuxtConfig({
     },
   },
 
-  seo: {
-    redirectToCanonicalSiteUrl: true,
-  },
+  // seo: {
+  //   redirectToCanonicalSiteUrl: true,
+  // },
 
   // Sitemap configuration with dynamic URLs
   sitemap: {
@@ -141,7 +141,7 @@ export default defineNuxtConfig({
       ],
       contactPoint: [
         {
-          telephone: "+1-570-905-8441",
+          telephone: "",
           contactType: "customer service",
           areaServed: "Luzerne County, Lackawanna County, Pennsylvania",
           availableLanguage: ["English"],
