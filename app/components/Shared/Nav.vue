@@ -1,8 +1,8 @@
 <template>
   <header class="border-b bg-stone-950 fixed w-full z-50" ref="dropdownContainer">
     <div class="bg-primoRed text-center py-0.5 roboto-condensed cursor-pointer">
-      <a href="tel:+15709058441" target="_blank" class="text-white"
-        aria-label="Call Primo Sewer Cleaning at (570) 905-8441">
+      <a href="tel:+15709058441" target="_blank" class="text-white" id="strip-call-now"
+        aria-label="Call Primo Sewer Cleaning at (570) 905-8441" @click="handleCallNowClick">
         Call Now • (570) 905-8441
       </a>
     </div>
@@ -36,6 +36,22 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, watch, computed } from 'vue'
 import { useRoute } from 'vue-router'
+
+// Declare gtag function type
+declare global {
+  interface Window {
+    gtag: (command: string, eventName: string, parameters?: Record<string, unknown>) => void;
+  }
+}
+
+const handleCallNowClick = () => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', 'conversion', {
+      'send_to': 'AW-10963798701/UPK5CP640Y8YEK2V-eso'
+    });
+  }
+};
+
 
 const showDropdown = ref(false)
 const dropdownContainer = ref(null)
