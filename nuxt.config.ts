@@ -129,21 +129,78 @@ export default defineNuxtConfig({
 
   schemaOrg: {
     identity: {
-      "@type": "Organization",
+      "@type": "Plumber",
       name: "Primo Plumbing & Sewer Cleaning",
       url: "https://primosewercleaning.com",
-      logo: "https://primosewercleaning.com/primo-sewer-cleaning.png",
       description:
         "Expert plumbing and sewer services in Northeastern PA, including Luzerne & Lackawanna County. Drain cleaning, water heater repair, and more!",
+      telephone: "+1-570-905-8441",
+      logo: "https://primosewercleaning.com/primo-sewer-cleaning.png",
+      image: ["https://primosewercleaning.com/primo-sewer-cleaning.png"],
       sameAs: [
         "https://www.facebook.com/primosewercleaning",
         "https://www.instagram.com/primosewercleaning/",
       ],
+      // List broad areas served
+      areaServed: [
+        "Pennsylvania",
+        "Luzerne County, Pennsylvania",
+        "Lackawanna County, Pennsylvania",
+        // Cities from serviceAreas data
+        ...serviceAreas.map((l) => l.name),
+      ],
+      // Structured serviceArea entries for richer semantics
+      serviceArea: [
+        { "@type": "AdministrativeArea", name: "Pennsylvania" },
+        { "@type": "AdministrativeArea", name: "Luzerne County" },
+        { "@type": "AdministrativeArea", name: "Lackawanna County" },
+        ...serviceAreas.map((l) => ({ "@type": "City", name: l.name })),
+      ],
+      // Services offered, derived from services data + core topics
+      knowsAbout: [
+        "Plumbing",
+        "Sewer Cleaning",
+        "Drain Cleaning",
+        "Hydrojetting",
+        "Video Camera Inspection",
+        ...services.map((s) => s.name),
+      ],
+      // Offers catalog with links to individual service pages
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Plumbing & Sewer Services",
+        itemListElement: services.map((s) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: s.name,
+            description: s.description,
+            url: `https://primosewercleaning.com/luzerne-lackawanna-plumbing-sewer/${s.slug}`,
+          },
+        })),
+      },
+      // 24/7 opening hours
+      openingHoursSpecification: [
+        {
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+          ],
+          opens: "00:00",
+          closes: "23:59",
+        },
+      ],
       contactPoint: [
         {
-          telephone: "",
+          "@type": "ContactPoint",
           contactType: "customer service",
-          areaServed: "Luzerne County, Lackawanna County, Pennsylvania",
+          telephone: "+1-570-905-8441",
+          areaServed: ["Luzerne County", "Lackawanna County", "Pennsylvania"],
           availableLanguage: ["English"],
         },
       ],
