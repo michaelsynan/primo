@@ -17,7 +17,7 @@
 <script setup>
 
 import { ref, onMounted, onUnmounted } from 'vue';
-// Google Analytics setup
+// Google Analytics and Meta Pixel setup
 useHead({
   script: [
     {
@@ -31,6 +31,11 @@ useHead({
         gtag('js', new Date());
         gtag('config', 'AW-10963798701');
       `
+    }
+  ],
+  noscript: [
+    {
+      children: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1409386597655675&ev=PageView&noscript=1" />`
     }
   ]
 });

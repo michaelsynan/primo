@@ -122,6 +122,9 @@ export default defineNuxtConfig({
       googleAnalytics: {
         id: "G-5SYL9K88YTnp",
       },
+      metaPixel: {
+        id: "1409386597655675",
+      },
     },
   },
 

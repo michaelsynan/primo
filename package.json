@@ -30,6 +30,7 @@
     "vue-leaflet": "^0.1.0"
   },
   "devDependencies": {
+    "@iconify-json/logos": "^1.2.10",
     "@iconify-json/mdi": "^1.2.3",
     "@nuxt/devtools": "latest",
     "@nuxt/eslint": "^0.7.6",
