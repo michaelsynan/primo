@@ -64,6 +64,7 @@ export default defineNuxtConfig({
         { loc: "/service-area", priority: 0.9 },
         { loc: "/contact-a-plumber", priority: 0.9 },
         { loc: "/emergency", priority: 0.9 },
+        { loc: "/24-7-emergency-plumbing-sewer-services", priority: 0.9 },
         { loc: "/plumbing-sewer-services", priority: 0.8 },
         { loc: "/privacy", priority: 0.3 },
         { loc: "/legal", priority: 0.3 },

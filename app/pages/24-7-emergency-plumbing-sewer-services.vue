@@ -2,8 +2,8 @@
 import { computed } from 'vue'
 
 useSeoMeta({
-  title: '24/7 Emergency Services',
-  description: 'Available 24/7 for emergency sewer and drain cleaning in Northeastern PA. Fast response for backed up sewers, overflowing toilets, and flooding. Call now for immediate assistance!',
+  title: '24/7 Emergency Plumbing & Sewer Services',
+  description: 'Available 24/7 for emergency plumbing, sewer, and drain cleaning in Northeastern PA. Fast response for backed up sewers, overflowing toilets, and flooding. Call now for immediate assistance!',
 })
 
 const img = useImage()
@@ -29,17 +29,18 @@ const backgroundStyles = computed(() => {
       <div class="absolute inset-0 bg-black/50 bg-opacity-50 z-[1]"></div>
 
       <h1 class="absolute inset-0 flex items-center justify-center text-3xl md:text-5xl text-stone-50 fancy z-[2]">
-        24/7 Emergency Services
+        24/7 Emergency Plumbing & Sewer Services
       </h1>
     </div>
 
     <!-- Content wrapper with padding on mobile -->
     <div class="px-4 md:px-0 mt-12">
       <section class="max-w-4xl mx-auto space-y-12 font-sans">
-        
+
         <div class="space-y-8">
           <div class="bg-primoRed/20 border border-primoRed rounded-md p-6 text-center">
-            <p class="text-stone-100 text-xl font-bold uppercase tracking-wider">Available 24/7 for urgent sewer & drain emergencies</p>
+            <p class="text-stone-100 text-xl font-bold uppercase tracking-wider">Available 24/7 for urgent plumbing,
+              sewer & drain emergencies</p>
             <p class="text-stone-300 mt-2 italic">Fast Response Times Across Luzerne & Lackawanna Counties</p>
           </div>
 
@@ -51,10 +52,12 @@ const backgroundStyles = computed(() => {
 
         <div class="py-12 border-y border-stone-800/50">
           <div class="max-w-3xl mx-auto text-center space-y-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-primoWhite)] fancy">Don't Wait in an Emergency</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-primoWhite)] fancy">Don't Wait in an Emergency
+            </h2>
             <p class="text-xl leading-relaxed text-stone-300">
-              When you have a sewer emergency, every minute counts. Backed up drains, overflowing toilets, and flooding can cause
-              significant, costly damage to your property if not addressed immediately. 
+              When you have a sewer emergency, every minute counts. Backed up drains, overflowing toilets, and flooding
+              can cause
+              significant, costly damage to your property if not addressed immediately.
             </p>
             <p class="text-xl leading-relaxed text-stone-300">
               Our experienced technicians are on standby 24 hours a day, 7 days a week, to respond quickly to your
@@ -64,7 +67,8 @@ const backgroundStyles = computed(() => {
         </div>
 
         <div class="pt-12 mt-12">
-          <h2 class="text-2xl md:text-3xl font-bold mb-12 text-[var(--color-primoWhite)] text-center fancy">Common Sewer Emergencies We Handle</h2>
+          <h2 class="text-2xl md:text-3xl font-bold mb-12 text-[var(--color-primoWhite)] text-center fancy">Common Sewer
+            Emergencies We Handle</h2>
           <div class="grid md:grid-cols-2 gap-6">
             <div class="flex items-start gap-4 bg-stone-900/50 p-4 rounded-lg border border-stone-800">
               <span class="text-primoRed text-2xl">•</span>
@@ -102,24 +106,29 @@ const backgroundStyles = computed(() => {
             <div class="space-y-6">
               <h2 class="text-3xl font-bold text-[var(--color-primoWhite)] fancy">High-Pressure Hydro Jetting</h2>
               <p class="text-lg leading-relaxed">
-                For the most stubborn emergency blockages, we utilize state-of-the-art **High-Pressure Hydro Jetting**. This powerful, non-invasive solution uses specialized nozzles to blast through grease, tree roots, and heavy mineral buildup.
+                For the most stubborn emergency blockages, we utilize state-of-the-art High-Pressure Hydro Jetting. This
+                powerful, non-invasive solution uses specialized nozzles to blast through grease, tree roots, and heavy
+                mineral buildup.
               </p>
               <p class="text-lg leading-relaxed">
-                Unlike traditional snakes that might just poke a hole in a clog, hydro jetting scours the entire inside of the pipe, restoring it to "like-new" flow and helping prevent future emergency backups.
+                Unlike traditional snakes that might just poke a hole in a clog, hydro jetting scours the entire inside
+                of the pipe, restoring it to "like-new" flow and helping prevent future emergency backups.
               </p>
               <div class="pt-4">
-                <NuxtLink to="/luzerne-lackawanna-plumbing-sewer/high-pressure-water-jetting" class="text-[var(--color-primo)] font-bold hover:underline inline-flex items-center gap-2">
+                <NuxtLink to="/luzerne-lackawanna-plumbing-sewer/high-pressure-water-jetting"
+                  class="text-[var(--color-primo)] font-bold hover:underline inline-flex items-center gap-2">
                   Learn more about Hydro Jetting <span>→</span>
                 </NuxtLink>
               </div>
             </div>
             <div class="relative rounded-lg overflow-hidden border border-stone-800 shadow-2xl h-64 md:h-80">
-               <NuxtImg src="/jetting.webp" alt="High Pressure Water Jetting" class="absolute inset-0 w-full h-full object-cover" />
-               <div class="absolute inset-0 bg-black/20"></div>
+              <NuxtImg src="/jetting.webp" alt="High Pressure Water Jetting"
+                class="absolute inset-0 w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-black/20"></div>
             </div>
           </div>
         </div>
-        
+
         <SharedCTA />
       </section>
     </div>
