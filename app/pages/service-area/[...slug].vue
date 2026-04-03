@@ -11,12 +11,12 @@ const location = computed(() => serviceAreas.find(l => l.slug === locationSlug))
 const service = computed(() => services.find(s => s.slug === serviceSlug));
 
 useSeoMeta({
-    title: computed(() => `${service.value?.name} in ${location.value?.name}`),
-    description: computed(() => `Get expert ${service.value?.name.toLowerCase()} in ${location.value?.name}. We offer fast, reliable plumbing and sewer services to keep your home or business running smoothly.`),
-    ogTitle: computed(() => `${service.value?.name} in ${location.value?.name} | Primo Sewer Cleaning`),
-    ogDescription: computed(() => `Get expert ${service.value?.name.toLowerCase()} in ${location.value?.name}. We offer fast, reliable plumbing and sewer services to keep your home or business running smoothly.`),
-    twitterTitle: computed(() => `${service.value?.name} in ${location.value?.name} | Primo Sewer Cleaning`),
-    twitterDescription: computed(() => `Get expert ${service.value?.name.toLowerCase()} in ${location.value?.name}. We offer fast, reliable plumbing and sewer services to keep your home or business running smoothly.`),
+    title: computed(() => `${service.value?.name} in ${location.value?.name}, PA`),
+    description: computed(() => `Get expert ${service.value?.name.toLowerCase()} in ${location.value?.name}, PA. We offer fast, reliable plumbing and sewer services to keep your home or business running smoothly.`),
+    ogTitle: computed(() => `${service.value?.name} in ${location.value?.name}, PA`),
+    ogDescription: computed(() => `Get expert ${service.value?.name.toLowerCase()} in ${location.value?.name}, PA. We offer fast, reliable plumbing and sewer services to keep your home or business running smoothly.`),
+    twitterTitle: computed(() => `${service.value?.name} in ${location.value?.name}, PA`),
+    twitterDescription: computed(() => `Get expert ${service.value?.name.toLowerCase()} in ${location.value?.name}, PA. We offer fast, reliable plumbing and sewer services to keep your home or business running smoothly.`),
 });
 
 const longDescription = computed(() => {
