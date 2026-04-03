@@ -2,6 +2,8 @@
 
 Look at [Nuxt docs](https://nuxt.com/docs/getting-started/introduction) and [Nuxt UI docs](https://ui3.nuxt.dev) to learn more.
 
+Small update!
+
 ## Setup
 
 Make sure to install the dependencies:
