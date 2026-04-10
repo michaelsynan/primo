@@ -27,7 +27,7 @@
     "better-sqlite3": "^12.8.0",
     "leaflet": "^1.9.4",
     "nuxt": "^4.4.2",
-    "nuxt-og-image": "5.1.1",
+    "nuxt-og-image": "6.2.5",
     "nuxt-skill-hub": "0.0.7",
     "unstorage": "^1.15.0",
     "vue-leaflet": "^0.1.0"
