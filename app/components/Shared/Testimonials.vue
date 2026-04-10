@@ -1,4 +1,7 @@
-<script setup lang="ts">
+<script
+  setup
+  lang="ts"
+>
 interface Testimonial {
   name: string
   text: string
@@ -15,7 +18,7 @@ const testimonials: Testimonial[] = [
 </script>
 
 <template>
-  <div class="w-full bg-juju-950 border-b border-stone-500 py-20">
+  <div class="w-full bg-juju-950 border-b border-stone-900 hover:border-stone-400 transition-colors duration-300 py-20">
     <UContainer class="relative flex flex-col justify-center items-center w-full h-auto md:min-h-[600px] my-8 gap-4">
       <div class="text-center w-full flex flex-col justify-center items-center mb-12">
         <h2 class="text-3xl font-bold pb-6 fancy">Here From Our Clients</h2>
@@ -24,19 +27,35 @@ const testimonials: Testimonial[] = [
         </div>
       </div>
       <div class="relative w-full flex flex-col md:flex-row justify-center items-center md:items-start gap-6 md:gap-10">
-        <SharedTestimonial class="mb-0 md:mb-10" v-for="(testimonial, index) in testimonials" :key="index"
-          :name="testimonial.name" :text="testimonial.text" :image="testimonial.image"
-          :profession="testimonial.profession" :stars="testimonial.stars" />
+        <SharedTestimonial
+          class="mb-0 md:mb-10"
+          v-for="(testimonial, index) in testimonials"
+          :key="index"
+          :name="testimonial.name"
+          :text="testimonial.text"
+          :image="testimonial.image"
+          :profession="testimonial.profession"
+          :stars="testimonial.stars"
+        />
       </div>
       <div class="flex flex-row max-w-content mt-8 md:mt-0">
-        <nuxt-link class="items-center flex flex-row roboto group"
+        <nuxt-link
+          class="items-center flex flex-row roboto group"
           to="https://www.google.com/search?hl=en-US&gl=us&q=Primo+Sewer+Cleaning&ludocid=17634468255813273309&lsig=AB86z5WvcyVaNQ2I_lcMAgYKntWW#lrd=0xadfd59710b8cb173:0xf4ba37727ea706dd,1"
-          target="_blank">
+          target="_blank"
+        >
           <span class="mr-1">Read All Testimonials </span>
           <div class="group-hover:translate-x-1.5 transition-transform duration-200">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-              <path fill="currentColor"
-                d="m13.692 17.308l-.707-.72l4.088-4.088H5v-1h12.073l-4.088-4.088l.707-.72L19 12z" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="m13.692 17.308l-.707-.72l4.088-4.088H5v-1h12.073l-4.088-4.088l.707-.72L19 12z"
+              />
             </svg>
           </div>
         </nuxt-link>

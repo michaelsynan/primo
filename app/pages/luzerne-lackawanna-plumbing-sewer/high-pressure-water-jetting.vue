@@ -1,4 +1,7 @@
-<script setup lang="ts">
+<script
+  setup
+  lang="ts"
+>
 import { computed } from 'vue'
 
 useSeoMeta({
@@ -20,13 +23,15 @@ const backgroundStyles = computed(() => {
 </script>
 
 <template>
-  <div class="flex flex-col justify-center gap-4 min-h-screen mx-auto pb-20 bg-stone-950">
-    <div id="header-div"
+  <div class="flex flex-col justify-center gap-4 min-h-screen mx-auto pb-20 bg-stone-950 service-page">
+    <div
+      id="header-div"
       class="relative w-full h-80 md:h-96 rounded overflow-hidden flex items-center justify-center text-white text-center px-4 mt-[74px] border-b border-stone-600"
-      :style="backgroundStyles">
+      :style="backgroundStyles"
+    >
 
       <!-- Semi-dark transparency overlay -->
-      <div class="absolute inset-0 bg-black/50 bg-opacity-50 z-[1]"></div>
+      <div class="absolute inset-0 bg-black/60 bg-opacity-50 z-[1]"></div>
 
       <h1 class="absolute inset-0 flex items-center justify-center text-3xl md:text-5xl text-stone-50 fancy z-[2]">
         High Pressure Water Jetting
@@ -68,7 +73,8 @@ const backgroundStyles = computed(() => {
             remove debris, and clean the inside of your pipes.</li>
           <li><strong>Cleaning:</strong> The high-pressure water effectively removes grease, tree roots, and sediment
             buildup, restoring full pipe capacity. <NuxtLink
-              to='/luzerne-lackawanna-plumbing-sewer/sewer-drain-cleaning-repair/'>
+              to='/luzerne-lackawanna-plumbing-sewer/sewer-drain-cleaning-repair/'
+            >
               Learn more about our sewer cleaning services.</NuxtLink>
           </li>
           <li><strong>Post-Inspection:</strong> After cleaning, we conduct a second inspection to ensure all blockages
@@ -111,7 +117,11 @@ const backgroundStyles = computed(() => {
         </p>
 
         <div class="mt-6 md:w-max">
-          <SharedButton to="/contact-a-plumber" text="Contact Us" class="max-w-content" />
+          <SharedButton
+            to="/contact-a-plumber"
+            text="Contact Us"
+            class="max-w-content"
+          />
         </div>
       </div>
     </div>

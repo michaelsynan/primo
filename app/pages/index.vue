@@ -7,8 +7,12 @@ useSeoMeta({
 defineOgImage({ url: '/primo-og.png' })
 </script>
 <template>
-  <main id="main-content" class="flex flex-col items-center justify-center">
-    <HomeHero />
+  <main
+    id="main-content"
+    class="flex flex-col items-center justify-center"
+  >
+    <HomeHero2 />
+    <HomeAbout />
     <LazyHomeServices />
     <SharedTestimonials />
     <HomeContact />

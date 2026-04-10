@@ -1,4 +1,7 @@
-<script setup lang="ts">
+<script
+  setup
+  lang="ts"
+>
 const servicesData = [
   {
     icon: '/wrench.svg',
@@ -8,7 +11,7 @@ const servicesData = [
   },
   {
     icon: '/camera.svg',
-    header: 'Video Camera Pipe Inspection',
+    header: 'Camera Inspection',
     description: 'Specially Designed Cameras allows technicians to conduct a visual inspection of your sewer line and other underground pipes to detect breaks and blockages.',
     link: '/plumbing-video-camera-pipe-inspection'
   },
@@ -42,16 +45,25 @@ const servicesData = [
 <template>
   <div class="border-b w-full py-20 md:py-32 flex flex-col gap-10 px-4 md:px-0">
 
-    <div id="our-services" :style="{ backgroundImage: 'url(/plumber.jpg)' }"
-      class="border border-primoGrey w-full max-w-7xl mx-auto flex justify-center items-center h-[280px] md:h-[400px] bg-cover rounded relative">
+    <div
+      id="our-services"
+      :style="{ backgroundImage: 'url(/plumber.jpg)' }"
+      class="border border-primoGrey w-full max-w-7xl mx-auto flex justify-center items-center h-[280px] md:h-[400px] bg-cover rounded relative"
+    >
       <div class="overlay"></div>
-      <h2 class="fancy text-4xl z-10 relative">Our Services</h2>
+      <h2 class="fancy text-4xl z-10 relative">Our Plumbing & Sewer Services</h2>
     </div>
 
     <div class="grid md:grid-cols-3 grid-cols-1 gap-6 md:gap-8 max-w-7xl mx-auto">
-      <HomeService v-for="service in servicesData" :key="service.header" :icon="service.icon" :header="service.header"
-        :description="service.description" :link="service.link"
-        class="bg-stone-900/50 p-8 rounded-md border-stone-900 hover:border-stone-400 transition-all ease duration-300 border" />
+      <HomeService
+        v-for="service in servicesData"
+        :key="service.header"
+        :icon="service.icon"
+        :header="service.header"
+        :description="service.description"
+        :link="service.link"
+        class="bg-stone-900/50 p-8 rounded-md border-stone-900 hover:border-stone-400 transition-all ease duration-300 border"
+      />
     </div>
 
   </div>

@@ -1,17 +1,32 @@
-<script setup lang="ts">
-defineProps({
+<script
+  setup
+  lang="ts"
+>
+const props = defineProps({
   icon: String,
   header: String,
   description: String,
-  link: String
-});
+  link: String,
+})
+
+const to = computed(() => `/luzerne-lackawanna-plumbing-sewer${props.link || ''}`)
 </script>
 
 <template>
-  <div class="flex flex-col h-full">
-    <div>
-      <img class="w-12 mb-2" :src="icon" :alt="header" />
-      <h3 class="fancy text-2xl py-2 text-stone-50 tracking-wide">{{ header }}</h3>
+  <NuxtLink
+    :to="to"
+    class="flex flex-col h-full group"
+    :aria-label="header ? `Learn more about ${header} services` : 'Learn more'"
+  >
+    <div class="pb-4">
+      <div class="flex flex-row items-end gap-4">
+        <img
+          class="w-10 shrink-0"
+          :src="icon"
+          :alt="header"
+        />
+        <h3 class="fancy text-2xl text-stone-50 tracking-wide">{{ header }}</h3>
+      </div>
     </div>
 
     <div class="flex-grow">
@@ -21,17 +36,26 @@ defineProps({
       </p>
     </div>
 
-    <div class="text-right ml-auto mt-4 group relative">
-      <NuxtLink :to="'/luzerne-lackawanna-plumbing-sewer' + link" class="text-sm flex flex-row items-center gap-1"
-        :aria-label="`Learn more about ${header} services`">
+    <div class="text-right ml-auto mt-4 relative">
+      <span
+        class="text-sm flex flex-row items-center gap-1"
+        aria-hidden="true"
+      >
         Learn More
         <div class="group-hover:translate-x-1.5 transition-transform duration-200">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-            <path fill="currentColor"
-              d="m13.692 17.308l-.707-.72l4.088-4.088H5v-1h12.073l-4.088-4.088l.707-.72L19 12z" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="m13.692 17.308l-.707-.72l4.088-4.088H5v-1h12.073l-4.088-4.088l.707-.72L19 12z"
+            />
           </svg>
         </div>
-      </NuxtLink>
+      </span>
     </div>
-  </div>
+  </NuxtLink>
 </template>

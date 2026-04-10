@@ -1,36 +1,133 @@
-<script setup lang="ts"></script>
+<script
+  setup
+  lang="ts"
+>
+import { computed } from 'vue'
+import { serviceAreas } from '../../data/locations'
+
+const topLocations = computed(() => {
+  return [...serviceAreas]
+    .sort((a, b) => (b.population ?? 0) - (a.population ?? 0))
+    .slice(0, 10)
+})
+
+const topLocationsLeft = computed(() => topLocations.value.slice(0, 5))
+const topLocationsRight = computed(() => topLocations.value.slice(5, 10))
+
+const topLocationsServiceSlug = 'sewer-drain-cleaning-repair'
+</script>
 
 <template>
   <div class="border-t py-2 bg-stone-950">
     <div class="flex flex-col md:flex-row gap-4 justify-between max-w-5xl mx-auto py-8 pb-10 px-4 md:px-0 ">
       <div class="flex flex-col md:flex-row gap-12 items-center md:items-start">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-16">
+        <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 md:gap-16">
           <div>
-            <NuxtImg src="/primo-logo-white.png" width="100" alt="Primo Sewer Cleaning Logo" />
+            <NuxtImg
+              src="/primo-logo-white.png"
+              width="100"
+              alt="Primo Sewer Cleaning Logo"
+            />
           </div>
 
           <div class="flex flex-col text-sm font-bold pb-1 gap-2 roboto">
-            <div class="text-center md:text-left">Menu</div>
+            <div class="text-center md:text-left !text-base">Menu</div>
             <div class="flex flex-col gap-1 font-normal text-center md:text-left">
-              <NuxtLink to="/service-area" class="hover:underline" aria-label="View Service Areas">Service Areas
+              <NuxtLink
+                to="/service-area"
+                class="hover:underline"
+                aria-label="View Service Areas"
+              >Service Areas
               </NuxtLink>
-              <NuxtLink to="/privacy" class="hover:underline" aria-label="Read our Privacy Policy">Privacy</NuxtLink>
-              <NuxtLink to="/legal" class="hover:underline" aria-label="View Legal Information">Legal</NuxtLink>
-              <NuxtLink to="/contact-a-plumber" class="hover:underline" aria-label="Contact Us">Contact</NuxtLink>
+              <NuxtLink
+                to="/posts"
+                class="hover:underline"
+                aria-label="Read our Blog"
+              >Blog</NuxtLink>
+              <NuxtLink
+                to="/privacy"
+                class="hover:underline"
+                aria-label="Read our Privacy Policy"
+              >Privacy</NuxtLink>
+              <NuxtLink
+                to="/legal"
+                class="hover:underline"
+                aria-label="View Legal Information"
+              >Legal</NuxtLink>
+              <NuxtLink
+                to="/contact-a-plumber"
+                class="hover:underline"
+                aria-label="Contact Us"
+              >Contact</NuxtLink>
             </div>
 
+          </div>
+
+          <div class="flex flex-col text-sm font-bold pb-1 gap-2 roboto">
+            <div class="text-center md:text-left !text-base">Top Locations</div>
+            <div class="grid grid-cols-2 gap-x-10">
+              <div class="flex flex-col gap-1 font-normal text-center md:text-left">
+                <NuxtLink
+                  v-for="area in topLocationsLeft"
+                  :key="area.slug"
+                  :to="`/service-area/${area.slug}/${topLocationsServiceSlug}`"
+                  class="hover:underline"
+                  :aria-label="`View ${area.name} sewer & drain services`"
+                >{{ area.name }}</NuxtLink>
+              </div>
+              <div class="flex flex-col gap-1 font-normal text-center md:text-left">
+                <NuxtLink
+                  v-for="area in topLocationsRight"
+                  :key="area.slug"
+                  :to="`/service-area/${area.slug}/${topLocationsServiceSlug}`"
+                  class="hover:underline"
+                  :aria-label="`View ${area.name} sewer & drain services`"
+                >{{ area.name }}</NuxtLink>
+              </div>
+            </div>
+
+            <NuxtLink
+              to="/service-area"
+              class="mt-2 font-normal hover:underline text-center md:text-left"
+              aria-label="View all service areas"
+            >All Locations</NuxtLink>
           </div>
         </div>
       </div>
       <div class="flex flex-col items-end text-right">
         <div class="flex flex-row gap-4 w-full mx-auto justify-center md:justify-end mt-6 md:mt-0">
-          <Nuxt-link to="https://www.facebook.com/Primosewercleaning" target="_blank"
-            aria-label="Follow Primo Sewer Cleaning on Facebook">
-            <UIcon name="i-mdi-facebook" class="w-8 h-8" aria-hidden="true" />
+          <Nuxt-link
+            to="https://www.facebook.com/Primosewercleaning"
+            target="_blank"
+            aria-label="Follow Primo Sewer Cleaning on Facebook"
+          >
+            <UIcon
+              name="i-mdi-facebook"
+              class="w-8 h-8"
+              aria-hidden="true"
+            />
           </Nuxt-link>
-          <Nuxt-link to="https://www.yelp.com/biz/primo-sewer-cleaning-dickson-city" target="_blank"
-            aria-label="Read Primo Sewer Cleaning reviews on Yelp">
-            <UIcon name="i-mdi-yelp" class="w-8 h-8" aria-hidden="true" />
+          <Nuxt-link
+            to="https://www.instagram.com/primosewercleaning/"
+            target="_blank"
+            aria-label="Follow Primo Sewer Cleaning on Instagram"
+          >
+            <UIcon
+              name="i-mdi-instagram"
+              class="w-8 h-8"
+              aria-hidden="true"
+            />
+          </Nuxt-link>
+          <Nuxt-link
+            to="https://www.yelp.com/biz/primo-sewer-cleaning-dickson-city"
+            target="_blank"
+            aria-label="Read Primo Sewer Cleaning reviews on Yelp"
+          >
+            <UIcon
+              name="i-mdi-yelp"
+              class="w-8 h-8"
+              aria-hidden="true"
+            />
           </Nuxt-link>
         </div>
 

@@ -1,4 +1,7 @@
-<script setup lang="ts">
+<script
+  setup
+  lang="ts"
+>
 import { services } from '../../data/services'
 
 useSeoMeta({
@@ -28,7 +31,9 @@ useSeoMeta({
           :to="`/luzerne-lackawanna-plumbing-sewer/${service.slug}`"
           class="group rounded-lg border border-stone-700 bg-stone-900 p-5 transition-all duration-200 hover:border-[var(--color-primo)] hover:-translate-y-0.5"
         >
-          <h2 class="text-xl md:text-2xl font-bold text-stone-100 group-hover:text-[var(--color-primo)] transition-colors duration-200">
+          <h2
+            class="text-xl md:text-2xl font-bold text-stone-100 group-hover:text-[var(--color-primo)] transition-colors duration-200"
+          >
             {{ service.name }}
           </h2>
           <p class="text-stone-300 mt-3 leading-relaxed">

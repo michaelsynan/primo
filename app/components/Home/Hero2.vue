@@ -26,20 +26,21 @@ const scrollToSection = async () => {
     style="background-size: cover; background-position: center;"
   >
     <div class="overlay"></div>
-    <div class="grid md:grid-cols-2 grid-cols-1 gap-4 h-screen max-w-5xl mx-auto pt-[73px]">
-      <div class="flex justify-center items-center w-[200px] md:w-[240px] mx-auto">
-        <Nuxt-img
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-4 min-h-[85vh] max-w-5xl mx-auto pt-[73px]">
+      <div class="flex justify-center items-center w-[400px] md:w-[400px] mx-auto">
+        <NuxtImg
           src="/primo-logo-gold-2.png"
           alt="Primo Sewer Cleaning"
           width="240"
+          class="w-full max-w-[260px] h-auto"
+          loading="eager"
         />
+
       </div>
       <div class="flex flex-col justify-center items-center md:items-start gap-6">
         <div class="flex flex-col gap-0 text-center md:text-left">
           <p class="roboto-condensed uppercase border-white text-white/90  w-full text-center md:text-left">
-            Serving
-            Northeastern
-            PA</p>
+            Top-Rated Plumber in Northeastern PA</p>
           <!-- H1 for larger screens hidden on smaller screens -->
           <h1 class="text-5xl md:text-6xl fancy leading-tight hidden md:block">NEPA Plumbing & Sewer Cleaning Services
           </h1>
@@ -55,13 +56,7 @@ const scrollToSection = async () => {
             link="631-942-0582"
             variant="call"
           />
-          <SharedButton
-            @click="scrollToSection"
-            class="hidden md:inline w-full md:w-max"
-            text="Learn More"
-            variant="ghost"
-            aria-label="Scroll to Services"
-          />
+
         </div>
       </div>
     </div>

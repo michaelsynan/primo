@@ -1,25 +1,71 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { readdirSync, statSync } from "node:fs";
+import { join, relative } from "node:path";
 import { serviceAreas } from "./app/data/locations";
 import { services } from "./app/data/services";
+
+const toIsoDate = (d: Date) => d.toISOString().split("T")[0];
+
+const collectMarkdownFiles = (dir: string): string[] => {
+  const out: string[] = [];
+  const entries = readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const fullPath = join(dir, entry.name);
+    if (entry.isDirectory()) {
+      out.push(...collectMarkdownFiles(fullPath));
+      continue;
+    }
+    if (!entry.isFile()) continue;
+    if (!entry.name.endsWith(".md")) continue;
+    out.push(fullPath);
+  }
+  return out;
+};
+
+const getPostSitemapEntries = () => {
+  try {
+    const postsDir = join(process.cwd(), "content", "posts");
+    const files = collectMarkdownFiles(postsDir);
+    return files.map((filePath) => {
+      const rel = relative(postsDir, filePath).replace(/\\/g, "/");
+      const slug = rel.replace(/\.md$/i, "");
+      const mtime = statSync(filePath).mtime;
+      return {
+        loc: `/posts/${slug}`,
+        lastmod: toIsoDate(mtime),
+        changefreq: "monthly",
+        priority: 0.6,
+      };
+    });
+  } catch {
+    return [];
+  }
+};
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  skillHub: {
+    targets: ["codex"],
+  },
+
   modules: [
+    "@nuxtjs/sitemap",
+    "@nuxt/content",
     "@nuxt/ui",
     "@nuxt/eslint",
     "@nuxt/image",
     "@nuxtjs/leaflet",
     "@nuxt/scripts",
-    "nuxt-og-image",
     "@nuxtjs/seo",
+    "nuxt-skill-hub",
   ],
 
   css: ["~/assets/css/main.css"],
 
-  future: {
-    compatibilityVersion: 4,
-  },
+  // future: {
+  //   compatibilityVersion: 4,
+  // },
 
   site: {
     url: "https://primosewercleaning.com",
@@ -61,6 +107,7 @@ export default defineNuxtConfig({
       // Add other static pages
       const staticPages = [
         { loc: "/", priority: 1.0 },
+        { loc: "/posts", priority: 0.7 },
         { loc: "/service-area", priority: 0.9 },
         { loc: "/contact-a-plumber", priority: 0.9 },
         { loc: "/emergency", priority: 0.9 },
@@ -98,23 +145,16 @@ export default defineNuxtConfig({
       staticPages.forEach((page) => {
         dynamicUrls.push({
           loc: page.loc,
-          lastmod: new Date().toISOString().split("T")[0],
+          lastmod: toIsoDate(new Date()),
           changefreq: "monthly",
           priority: page.priority,
         });
       });
 
-      return dynamicUrls;
-    },
-  },
+      // Blog posts from content/posts/*.md
+      dynamicUrls.push(...getPostSitemapEntries());
 
-  tailwindcss: {
-    theme: {
-      extend: {
-        colors: {
-          primoGreen: "#008C45",
-        },
-      },
+      return dynamicUrls;
     },
   },
 
