@@ -2,6 +2,8 @@
   setup
   lang="ts"
 >
+import BaseCta from '~/components/ContentCta.vue'
+
 type CtaVariant = 'call' | 'email' | 'whatsapp' | 'link'
 
 const props = defineProps<{
@@ -25,7 +27,7 @@ const mergedProps = computed(() => ({
 
 <template>
   <div class="mdc-cta">
-    <ContentCta
+    <BaseCta
       v-bind="mergedProps"
       class="!border-primoYellow !bg-primoYellow !text-primoBlack"
     />

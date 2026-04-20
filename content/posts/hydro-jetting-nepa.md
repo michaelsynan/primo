@@ -2,6 +2,7 @@
 title: "Hydro Jetting in NEPA"
 description: "Hydro jetting in Northeastern Pennsylvania is becoming the gold standard for sewer and drain restoration as contractors adopt advanced high-pressure cleaning systems, including Primo Sewer Cleaning’s recent acquisition of the Mongoose Model 123 jetter."
 image: "/images/posts/mongoose-jetter.webp"
+ctaTopic: "high-pressure water jetting"
 date: "2026-04-10"
 ---
 
@@ -47,6 +48,3 @@ Rather than relying primarily on mechanical methods that provide short-term fixe
 In a region where aging infrastructure, environmental conditions, and heavy root intrusion continue to challenge underground systems, this level of capability represents more than an upgrade—it represents a higher standard of service.
 
 Primo Sewer Cleaning’s focus on advanced equipment and full-line restoration places it at the forefront of modern sewer maintenance in NEPA, delivering results that go beyond clearing blockages and instead restore the system’s functionality as a whole.
-
-::cta{title="Do you need high-pressure Water Jetting?" description="Call Primo Sewer Cleaning for high-pressure water jetting and 24/7 drain and sewer service in Northeastern PA." primaryText="Call now" primaryVariant="call" secondaryText="Contact us" secondaryTo="/contact-a-plumber"}
-::

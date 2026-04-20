@@ -10,6 +10,20 @@ export const collections = {
       title: z.string(),
       description: z.string(),
       image: z.string().optional(),
+      ctaTopic: z.string().optional(),
+      cta: z
+        .object({
+          title: z.string().optional(),
+          description: z.string().optional(),
+          primaryText: z.string().optional(),
+          primaryVariant: z
+            .enum(["call", "email", "whatsapp", "link"])
+            .optional(),
+          primaryTo: z.string().optional(),
+          secondaryText: z.string().optional(),
+          secondaryTo: z.string().optional(),
+        })
+        .optional(),
       date: z.string(),
     }),
   }),
