@@ -5,7 +5,6 @@
 /* import { POST_TAG_CLASSES, isPostTag } from '@/data/postTags' */
 
 import BaseCta from '~/components/ContentCta.vue'
-import BlogPostCta from '~/components/BlogPostCta.vue'
 
 const formatPostDate = (date: string) => {
   const d = new Date(`${date}T00:00:00Z`)
@@ -31,12 +30,6 @@ const { data: page } = await useAsyncData(
 )
 
 const post = computed(() => page.value)
-const postCtaTopic = computed(() => {
-  const raw = (post.value as any)?.ctaTopic
-  if (typeof raw !== 'string') return ''
-  return raw.trim()
-})
-
 const postCta = computed(() => {
   const raw = (post.value as any)?.cta
   if (!raw) return null
@@ -191,12 +184,6 @@ useHead(() => ({
           v-if="postCta"
           class="mt-10"
           v-bind="postCta"
-        />
-
-        <BlogPostCta
-          v-else-if="postCtaTopic"
-          class="mt-10"
-          :topic="postCtaTopic"
         />
       </article>
 

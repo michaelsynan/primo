@@ -19,30 +19,43 @@ useSeoMeta({
           Luzerne & Lackawanna Plumbing & Sewer Services
         </h1>
         <p class="text-stone-300 text-lg max-w-3xl">
-          Browse all six services below to learn how we solve sewer, drain, and plumbing problems throughout
+          Browse all services below to learn how we solve sewer, drain, and plumbing problems throughout
           Northeastern Pennsylvania.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-        <NuxtLink
-          v-for="service in services"
-          :key="service.slug"
-          :to="`/luzerne-lackawanna-plumbing-sewer/${service.slug}`"
-          class="group rounded-lg border border-stone-700 bg-stone-900 p-5 transition-all duration-200 hover:border-[var(--color-primo)] hover:-translate-y-0.5"
-        >
-          <h2
-            class="text-xl md:text-2xl font-bold text-stone-100 group-hover:text-[var(--color-primo)] transition-colors duration-200"
+        <template v-for="(service, idx) in services" :key="service.slug || `${service.name}-${idx}`">
+          <NuxtLink
+            v-if="service.slug"
+            :to="`/luzerne-lackawanna-plumbing-sewer/${service.slug}`"
+            class="group rounded-lg border border-stone-700 bg-stone-900 p-5 transition-all duration-200 hover:border-[var(--color-primo)] hover:-translate-y-0.5"
           >
-            {{ service.name }}
-          </h2>
-          <p class="text-stone-300 mt-3 leading-relaxed">
-            {{ service.description }}
-          </p>
-          <p class="mt-4 text-sm font-semibold text-[var(--color-primo)]">
-            Learn more ->
-          </p>
-        </NuxtLink>
+            <h2
+              class="text-xl md:text-2xl font-bold text-stone-100 group-hover:text-[var(--color-primo)] transition-colors duration-200"
+            >
+              {{ service.name }}
+            </h2>
+            <p class="text-stone-300 mt-3 leading-relaxed">
+              {{ service.description }}
+            </p>
+            <p class="mt-4 text-sm font-semibold text-[var(--color-primo)]">
+              Learn more ->
+            </p>
+          </NuxtLink>
+
+          <div
+            v-else
+            class="rounded-lg border border-stone-700 bg-stone-900 p-5"
+          >
+            <h2 class="text-xl md:text-2xl font-bold text-stone-100">
+              {{ service.name }}
+            </h2>
+            <p class="text-stone-300 mt-3 leading-relaxed">
+              {{ service.description }}
+            </p>
+          </div>
+        </template>
       </div>
     </section>
   </div>

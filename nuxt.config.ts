@@ -1,46 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { readdirSync, statSync } from "node:fs";
-import { join, relative } from "node:path";
 import { serviceAreas } from "./app/data/locations";
 import { services } from "./app/data/services";
 
 const toIsoDate = (d: Date) => d.toISOString().split("T")[0];
-
-const collectMarkdownFiles = (dir: string): string[] => {
-  const out: string[] = [];
-  const entries = readdirSync(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    const fullPath = join(dir, entry.name);
-    if (entry.isDirectory()) {
-      out.push(...collectMarkdownFiles(fullPath));
-      continue;
-    }
-    if (!entry.isFile()) continue;
-    if (!entry.name.endsWith(".md")) continue;
-    out.push(fullPath);
-  }
-  return out;
-};
-
-const getPostSitemapEntries = () => {
-  try {
-    const postsDir = join(process.cwd(), "content", "posts");
-    const files = collectMarkdownFiles(postsDir);
-    return files.map((filePath) => {
-      const rel = relative(postsDir, filePath).replace(/\\/g, "/");
-      const slug = rel.replace(/\.md$/i, "");
-      const mtime = statSync(filePath).mtime;
-      return {
-        loc: `/posts/${slug}`,
-        lastmod: toIsoDate(mtime),
-        changefreq: "monthly",
-        priority: 0.6,
-      };
-    });
-  } catch {
-    return [];
-  }
-};
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -89,19 +51,22 @@ export default defineNuxtConfig({
 
   // Sitemap configuration with dynamic URLs
   sitemap: {
+    includeAppSources: true,
     urls: () => {
       const dynamicUrls: any[] = [];
 
       // Generate all service area + service combinations
       serviceAreas.forEach((location) => {
-        services.forEach((service) => {
-          dynamicUrls.push({
-            loc: `/service-area/${location.slug}/${service.slug}`,
-            lastmod: new Date().toISOString().split("T")[0],
-            changefreq: "monthly",
-            priority: 0.8,
+        services
+          .filter((service) => Boolean(service.slug))
+          .forEach((service) => {
+            dynamicUrls.push({
+              loc: `/service-area/${location.slug}/${service.slug}`,
+              lastmod: new Date().toISOString().split("T")[0],
+              changefreq: "monthly",
+              priority: 0.8,
+            });
           });
-        });
       });
 
       // Add other static pages
@@ -116,6 +81,10 @@ export default defineNuxtConfig({
         { loc: "/privacy", priority: 0.3 },
         { loc: "/legal", priority: 0.3 },
         // Add individual service pages
+        {
+          loc: "/luzerne-lackawanna-plumbing-sewer/sump-pump-services",
+          priority: 0.8,
+        },
         {
           loc: "/luzerne-lackawanna-plumbing-sewer/sewer-diagnosis-inspection",
           priority: 0.8,
@@ -150,9 +119,6 @@ export default defineNuxtConfig({
           priority: page.priority,
         });
       });
-
-      // Blog posts from content/posts/*.md
-      dynamicUrls.push(...getPostSitemapEntries());
 
       return dynamicUrls;
     },
@@ -213,15 +179,17 @@ export default defineNuxtConfig({
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Plumbing & Sewer Services",
-        itemListElement: services.map((s) => ({
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: s.name,
-            description: s.description,
-            url: `https://primosewercleaning.com/luzerne-lackawanna-plumbing-sewer/${s.slug}`,
-          },
-        })),
+        itemListElement: services
+          .filter((s) => Boolean(s.slug))
+          .map((s) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: s.name,
+              description: s.description,
+              url: `https://primosewercleaning.com/luzerne-lackawanna-plumbing-sewer/${s.slug}`,
+            },
+          })),
       },
       // 24/7 opening hours
       openingHoursSpecification: [

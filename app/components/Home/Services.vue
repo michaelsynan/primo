@@ -4,6 +4,24 @@
 >
 const servicesData = [
   {
+    icon: '/pipe.svg',
+    header: 'Sump Pump Services',
+    description: 'Protect your basement from flooding with sump pump installation, repair, and replacement. We service primary and backup systems and troubleshoot failures fast.',
+    link: '/sump-pump-services'
+  },
+  {
+    icon: '/worker.svg',
+    header: 'Excavation Services',
+    description: 'Underground pipe repairs, sewer line replacements, water line installations, trenching, and site excavation performed safely and efficiently by experienced professionals.',
+    link: ''
+  },
+  {
+    icon: '/wrench.svg',
+    header: 'Emergency Plumbing Services',
+    description: 'Available for urgent plumbing issues including burst pipes, sewer backups, overflowing fixtures, water heater failures, and other emergencies that require immediate attention.',
+    link: ''
+  },
+  {
     icon: '/wrench.svg',
     header: 'Diagnosis & Inspection',
     description: 'Our technicians fully inspect and properly diagnose your issue at low cost with professionalism & enthusiasm for all your clogs, leaks, and repairs!',
@@ -51,7 +69,7 @@ const servicesData = [
       class="border border-primoGrey w-full max-w-7xl mx-auto flex justify-center items-center h-[280px] md:h-[400px] bg-cover rounded relative"
     >
       <div class="overlay"></div>
-      <h2 class="fancy text-4xl z-10 relative">Our Plumbing & Sewer Services</h2>
+      <h2 class="fancy text-4xl z-10 relative text-center">Our Plumbing & Sewer Services</h2>
     </div>
 
     <div class="grid md:grid-cols-3 grid-cols-1 gap-6 md:gap-8 max-w-7xl mx-auto">

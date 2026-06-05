@@ -100,6 +100,7 @@ const backgroundStyles = computed(() => {
               class="bg-stone-900/50 p-6 rounded-md border border-stone-700 hover:border-stone-200 transition-all ease duration-300 group"
             >
               <NuxtLink
+                v-if="otherService.slug"
                 :to="`/service-area/${location.slug}/${otherService.slug}`"
                 class="block"
               >
@@ -127,6 +128,15 @@ const backgroundStyles = computed(() => {
                   </div>
                 </div>
               </NuxtLink>
+
+              <div v-else class="block">
+                <div class="flex flex-col h-full">
+                  <h3 class="text-xl font-bold text-stone-50 mb-3">
+                    {{ otherService.name }}</h3>
+                  <p class="text-stone-400 transition-colors text-sm leading-relaxed flex-grow">
+                    {{ otherService.description }}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

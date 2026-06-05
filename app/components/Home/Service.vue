@@ -9,11 +9,18 @@ const props = defineProps({
   link: String,
 })
 
-const to = computed(() => `/luzerne-lackawanna-plumbing-sewer${props.link || ''}`)
+const hasLink = computed(() => Boolean(props.link && props.link.trim()))
+
+const to = computed(() => {
+  if (!hasLink.value) return ''
+  const link = props.link!.startsWith('/') ? props.link! : `/${props.link!}`
+  return `/luzerne-lackawanna-plumbing-sewer${link}`
+})
 </script>
 
 <template>
   <NuxtLink
+    v-if="hasLink"
     :to="to"
     class="flex flex-col h-full group"
     :aria-label="header ? `Learn more about ${header} services` : 'Learn more'"
@@ -58,4 +65,28 @@ const to = computed(() => `/luzerne-lackawanna-plumbing-sewer${props.link || ''}
       </span>
     </div>
   </NuxtLink>
+
+  <div
+    v-else
+    class="flex flex-col h-full group cursor-default"
+  >
+    <div class="pb-4">
+      <div class="flex flex-row items-end gap-4">
+        <img
+          class="w-10 shrink-0"
+          :src="icon"
+          :alt="header"
+        />
+        <h3 class="fancy text-2xl text-stone-50 tracking-wide">{{ header }}</h3>
+      </div>
+    </div>
+
+    <div class="flex-grow">
+      <p
+        class="roboto leading-loose text-stone-400"
+      >
+        {{ description }}
+      </p>
+    </div>
+  </div>
 </template>

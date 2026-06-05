@@ -10,6 +10,10 @@ export const collections = {
       title: z.string(),
       description: z.string(),
       image: z.string().optional(),
+      sitemap: z
+        .union([z.boolean(), z.record(z.any())])
+        .optional()
+        .default({}),
       ctaTopic: z.string().optional(),
       cta: z
         .object({

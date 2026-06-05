@@ -28,15 +28,22 @@ useSeoMeta({
         <h2 class="text-2xl font-bold text-[var(--color-primoWhite)]">{{ area.name }}</h2>
         <ul class="list-disc pl-5 space-y-2 text-lg mt-2">
           <li
-            v-for="service in services"
-            :key="service.slug"
+            v-for="(service, idx) in services"
+            :key="service.slug || `${service.name}-${idx}`"
           >
             <NuxtLink
+              v-if="service.slug"
               :to="`/service-area/${area.slug}/${service.slug}`"
               class="text-stone-300 hover:text-[var(--color-primo)]"
             >
               {{ service.name }}
             </NuxtLink>
+            <span
+              v-else
+              class="text-stone-500"
+            >
+              {{ service.name }}
+            </span>
           </li>
         </ul>
       </div>

@@ -10,6 +10,13 @@
 
       <!-- Right Column for Content -->
       <div class="flex flex-col items-center justify-center gap-6 w-full md:w-1/2 text-center">
+        <NuxtImg
+          src="/licensed-insured-plumber.png"
+          alt="Licensed & Insured Plumber"
+          width="260"
+          class="w-full max-w-[220px] h-auto pb-6"
+          loading="lazy"
+        />
         <h2 class="fancy !text-2xl md:!text-4xl">Best Pennsylvania Plumber Near You</h2>
         <div class="max-w-4xl !text-lg leading-loose"><b>Primo Sewer Cleaning</b> proudly serves Dickson City,
           Lackawanna County, and the
