@@ -25,7 +25,10 @@ useSeoMeta({
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-        <template v-for="(service, idx) in services" :key="service.slug || `${service.name}-${idx}`">
+        <template
+          v-for="(service, idx) in services"
+          :key="service.slug || `${service.name}-${idx}`"
+        >
           <NuxtLink
             v-if="service.slug"
             :to="`/luzerne-lackawanna-plumbing-sewer/${service.slug}`"

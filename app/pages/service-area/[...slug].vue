@@ -129,7 +129,10 @@ const backgroundStyles = computed(() => {
                 </div>
               </NuxtLink>
 
-              <div v-else class="block">
+              <div
+                v-else
+                class="block"
+              >
                 <div class="flex flex-col h-full">
                   <h3 class="text-xl font-bold text-stone-50 mb-3">
                     {{ otherService.name }}</h3>

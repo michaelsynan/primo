@@ -16,5 +16,6 @@ defineOgImage({ url: '/primo-og.png' })
     <LazyHomeServices />
     <SharedTestimonials />
     <HomeContact />
+    <LazyHomeFAQ />
   </main>
 </template>

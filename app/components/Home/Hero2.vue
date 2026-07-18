@@ -42,7 +42,8 @@ const scrollToSection = async () => {
           <p class="roboto-condensed uppercase border-white text-white/90  w-full text-center md:text-left">
             Top-Rated Plumber in Northeastern PA</p>
           <!-- H1 for larger screens hidden on smaller screens -->
-          <h1 class="text-5xl md:text-6xl fancy leading-tight hidden md:block">NEPA Plumbing & Sewer Cleaning Services
+          <h1 class="text-5xl md:text-6xl fancy !leading-tighter hidden md:block">NEPA Plumbing & Sewer Cleaning
+            Services
           </h1>
 
           <!-- H1 for smaller screens hidden on larger screens -->

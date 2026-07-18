@@ -82,9 +82,7 @@ const to = computed(() => {
     </div>
 
     <div class="flex-grow">
-      <p
-        class="roboto leading-loose text-stone-400"
-      >
+      <p class="roboto leading-loose text-stone-400">
         {{ description }}
       </p>
     </div>

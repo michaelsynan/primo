@@ -30,7 +30,7 @@ const reviewCount = ref(5)
             class="w-4 h-4 text-yellow-300 -ml-0.5"
           />
         </div>
-        <div class="text-stone-300 text-xs -mt-0.5">Out of 122 reviews</div>
+        <div class="text-stone-300 text-xs -mt-0.5">Out of 133 reviews</div>
       </div>
     </a>
   </div>
