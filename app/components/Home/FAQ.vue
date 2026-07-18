@@ -89,7 +89,7 @@ useHead({
 </script>
 
 <template>
-  <section class="border-b w-full py-20 md:py-28 px-4 md:px-0 bg-stone-950">
+  <section class="border-t border-b w-full py-20 md:py-28 px-4 md:px-0 bg-stone-950">
     <div class="max-w-5xl mx-auto">
       <div class="mb-8 md:mb-10 text-center">
         <h2 class="fancy text-3xl md:text-5xl">Frequently Asked Questions</h2>
