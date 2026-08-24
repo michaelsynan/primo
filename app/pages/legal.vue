@@ -6,7 +6,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="flex flex-col  gap-4 py-40 max-w-4xl mx-auto px-4">
+  <div class="flex flex-col gap-4 py-40 max-w-4xl mx-auto px-4">
     <h1 class="text-4xl fancy">Legal Disclaimer</h1>
     <div class="roboto text-lg leading-loose">
       <p>The information on this website is provided "as is" without any representations or warranties, express or
@@ -19,9 +19,10 @@ useSeoMeta({
       </ul>
       <p>Nothing on this website constitutes, or is meant to constitute, advice of any kind. If you require advice in
         relation to any legal, financial, or medical matter, you should consult an appropriate professional.</p>
+      <p class="mt-4">This page has moved to our <NuxtLink to="/terms-and-conditions" class="text-primoGreen underline">Terms &amp; Conditions</NuxtLink> page.</p>
     </div>
     <div class="mt-4 max-w-lg">
-      <SharedButton2 text="Back to Home" class="mx-auto mt-8 md:mt-10 w-full md:w-max" to="/" inline />
+      <SharedButton2 text="View Terms & Conditions" class="mx-auto mt-8 md:mt-10 w-full md:w-max" to="/terms-and-conditions" inline />
     </div>
   </div>
 </template>
