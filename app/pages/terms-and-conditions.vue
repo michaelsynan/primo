@@ -20,15 +20,17 @@ useSeoMeta({
       <p>
         By providing your phone number and consenting to receive text messages from Primo Sewer Cleaning, you agree to
         receive service-related SMS messages, including appointment confirmations, appointment reminders, scheduling
-        updates, and customer-care communications.
+        updates, and customer service communications.
       </p>
       <p>
-        Message frequency varies based on your appointments and interactions with Primo Sewer Cleaning. Message and data
-        rates may apply. You may opt out of SMS messages at any time by replying <strong>STOP</strong>. For assistance,
-        reply <strong>HELP</strong> to <strong>(570) 630-7469</strong>.
+        Message frequency varies based on your appointments and interactions with Primo Sewer Cleaning (typically 1-5
+        messages per service request). Message and data rates may apply. You may opt out of SMS messages at any time by
+        texting <strong>STOP</strong> to <strong>(570) 630-7469</strong>. For assistance, text <strong>HELP</strong> to
+        the same number.
       </p>
       <p>
-        SMS consent is not a condition of purchasing services.
+        SMS consent is not required to purchase services from Primo Sewer Cleaning. Carriers are not liable for delayed
+        or undelivered messages.
       </p>
 
       <h2 class="text-2xl mt-6">Website Disclaimer</h2>

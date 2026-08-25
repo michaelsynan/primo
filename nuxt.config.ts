@@ -7,6 +7,13 @@ const toIsoDate = (d: Date) => d.toISOString().split("T")[0];
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  runtimeConfig: {
+    resendApiKey: process.env.RESEND_API_KEY,
+    contactFrom: process.env.CONTACT_FROM,
+    contactTo: process.env.CONTACT_TO,
+    contactBcc: process.env.CONTACT_BCC,
+  },
+
   skillHub: {
     targets: ["codex"],
   },
@@ -21,6 +28,7 @@ export default defineNuxtConfig({
     "@nuxt/scripts",
     "@nuxtjs/seo",
     "nuxt-skill-hub",
+    "nuxt-resend",
   ],
 
   css: ["~/assets/css/main.css"],

@@ -42,6 +42,19 @@ useSeoMeta({
 
       <h2 class="text-2xl mt-6">SMS / Text Messaging</h2>
       <p>
+        If you provide your mobile phone number and consent to receive text messages, we may send you service-related
+        SMS messages including appointment confirmations, reminders, scheduling updates, and customer service
+        communications. Message frequency varies (typically 1-5 messages per service request). Message and data rates may
+        apply.
+      </p>
+
+      <p>
+        You can opt out of SMS messages at any time by texting <strong>STOP</strong> to <strong>(570) 630-7469</strong>.
+        For assistance, text <strong>HELP</strong> to the same number. Consent to receive SMS messages is not required to
+        purchase services from Primo Sewer Cleaning.
+      </p>
+
+      <p>
         If you provide consent to receive text messages from Primo Sewer Cleaning, we may send you text messages related
         to your appointments and services, including appointment confirmations, reminders, scheduling information, and
         other customer-care communications. Message frequency varies depending on your service and appointments. Message
