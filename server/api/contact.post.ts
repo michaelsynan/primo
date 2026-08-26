@@ -54,13 +54,6 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  if (consentService !== true) {
-    throw createError({
-      statusCode: 400,
-      statusMessage: "Service communications consent is required",
-    });
-  }
-
   try {
     const toList = contactTo
       .split(",")
