@@ -140,7 +140,7 @@
               for="sms-consent"
               class="text-stone-300"
             >
-              I agree to receive service-related communications from Primo Sewer Cleaning, including calls, emails, and
+              Optional: I agree to receive service-related communications from Primo Sewer Cleaning, including calls, emails, and
               text messages about appointment confirmations, reminders, scheduling updates, and customer service. Message
               frequency varies (typically 1-5 messages per service request). Message and data rates may apply. Text STOP to (570)
               630-7469 to opt out or HELP for assistance. Consent is not required to purchase services. See our <NuxtLink
@@ -152,11 +152,6 @@
               >Terms &amp; Conditions</NuxtLink>.
             </label>
           </div>
-
-          <p
-            v-if="errors.consentService"
-            class="text-rose-400 text-sm -mt-2"
-          >{{ errors.consentService }}</p>
 
           <div class="flex items-start gap-3">
             <UCheckbox
@@ -218,7 +213,6 @@ const errors = reactive({
   phone: '',
   service: '',
   message: '',
-  consentService: '',
   submit: ''
 })
 
@@ -231,7 +225,6 @@ function validate() {
   errors.phone = ''
   errors.service = ''
   errors.message = ''
-  errors.consentService = ''
   errors.submit = ''
 
   if (!name.value || name.value.trim().length < 2) {
@@ -250,11 +243,8 @@ function validate() {
   if (!message.value || message.value.trim().length < 10) {
     errors.message = 'Please include a short message (at least 10 characters).'
   }
-  if (!consentService.value) {
-    errors.consentService = 'You must agree to service communications so we can contact you about your request.'
-  }
 
-  return !errors.name && !errors.email && !errors.phone && !errors.service && !errors.message && !errors.consentService
+  return !errors.name && !errors.email && !errors.phone && !errors.service && !errors.message
 }
 
 async function onSubmit() {
