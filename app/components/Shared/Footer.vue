@@ -129,6 +129,17 @@ const topLocationsServiceSlug = 'sewer-drain-cleaning-repair'
               aria-hidden="true"
             />
           </Nuxt-link>
+          <Nuxt-link
+            to="https://www.youtube.com/@primosewercleaning"
+            target="_blank"
+            aria-label="Follow Primo Sewer Cleaning on YouTube"
+          >
+            <UIcon
+              name="i-mdi-youtube"
+              class="w-8 h-8"
+              aria-hidden="true"
+            />
+          </Nuxt-link>
         </div>
 
       </div>
