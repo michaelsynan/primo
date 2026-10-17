@@ -24,10 +24,6 @@ import { ref, onMounted, onUnmounted } from 'vue';
 useHead({
   script: [
     {
-      async: true,
-      src: 'https://www.googletagmanager.com/gtag/js?id=AW-10963798701'
-    },
-    {
       innerHTML: `
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -65,18 +61,19 @@ useHead({
 const showNavbar = ref(true);
 const { $scripts } = useNuxtApp();
 let lastScrollTop = 0;
-let metaPixelTimer;
-let metaPixelLoaded = false;
+let trackingTimer;
+let trackingLoaded = false;
 
-const loadMetaPixel = () => {
-  if (metaPixelLoaded) return;
+const loadDeferredTracking = () => {
+  if (trackingLoaded) return;
 
-  metaPixelLoaded = true;
-  window.clearTimeout(metaPixelTimer);
-  window.removeEventListener('pointerdown', loadMetaPixel);
-  window.removeEventListener('keydown', loadMetaPixel);
-  window.removeEventListener('touchstart', loadMetaPixel);
-  window.removeEventListener('scroll', loadMetaPixel);
+  trackingLoaded = true;
+  window.clearTimeout(trackingTimer);
+  window.removeEventListener('pointerdown', loadDeferredTracking);
+  window.removeEventListener('keydown', loadDeferredTracking);
+  window.removeEventListener('touchstart', loadDeferredTracking);
+  window.removeEventListener('scroll', loadDeferredTracking);
+  void $scripts.googleAnalytics.load();
   void $scripts.metaPixel.load();
 };
 
@@ -92,20 +89,20 @@ const handleScroll = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
-  window.addEventListener('pointerdown', loadMetaPixel, { once: true, passive: true });
-  window.addEventListener('keydown', loadMetaPixel, { once: true });
-  window.addEventListener('touchstart', loadMetaPixel, { once: true, passive: true });
-  window.addEventListener('scroll', loadMetaPixel, { once: true, passive: true });
-  metaPixelTimer = window.setTimeout(loadMetaPixel, 15000);
+  window.addEventListener('pointerdown', loadDeferredTracking, { once: true, passive: true });
+  window.addEventListener('keydown', loadDeferredTracking, { once: true });
+  window.addEventListener('touchstart', loadDeferredTracking, { once: true, passive: true });
+  window.addEventListener('scroll', loadDeferredTracking, { once: true, passive: true });
+  trackingTimer = window.setTimeout(loadDeferredTracking, 15000);
 });
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
-  window.clearTimeout(metaPixelTimer);
-  window.removeEventListener('pointerdown', loadMetaPixel);
-  window.removeEventListener('keydown', loadMetaPixel);
-  window.removeEventListener('touchstart', loadMetaPixel);
-  window.removeEventListener('scroll', loadMetaPixel);
+  window.clearTimeout(trackingTimer);
+  window.removeEventListener('pointerdown', loadDeferredTracking);
+  window.removeEventListener('keydown', loadDeferredTracking);
+  window.removeEventListener('touchstart', loadDeferredTracking);
+  window.removeEventListener('scroll', loadDeferredTracking);
 });
 </script>
 

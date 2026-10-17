@@ -1,6 +1,17 @@
 <script setup>
 import { nextTick } from 'vue';
 
+useHead({
+  link: [
+    {
+      rel: 'preload',
+      as: 'image',
+      href: '/best-sewer-cleaning-primo-optimized.webp',
+      fetchpriority: 'high',
+    },
+  ],
+});
+
 const scrollToSection = async () => {
   await nextTick(); // Ensure the DOM is ready
 
@@ -21,21 +32,24 @@ const scrollToSection = async () => {
 
 <template>
   <div
-    :style="{ backgroundImage: 'url(/best-sewer-cleaning-primo.webp)' }"
-    class="border-b bg-fixed w-full px-4 md:px-0 bg-stone-950 relative overflow-hidden"
+    :style="{ backgroundImage: 'url(/best-sewer-cleaning-primo-optimized.webp)' }"
+    class="border-b w-full px-4 md:px-0 bg-stone-950 relative overflow-hidden"
     style="background-size: cover; background-position: center;"
   >
     <div class="overlay"></div>
     <div class="grid md:grid-cols-2 grid-cols-1 gap-4 min-h-[85vh] max-w-5xl mx-auto pt-[73px]">
-      <div class="flex justify-center items-center w-[400px] md:w-[400px] mx-auto">
+      <div class="flex justify-center items-center w-full max-w-[400px] mx-auto">
         <NuxtImg
           src="/primo-logo-gold-2.png"
           alt="Primo Sewer Cleaning"
-          width="240"
+          width="260"
+          height="282"
           sizes="260px"
+          densities="1x"
           quality="80"
           class="w-full max-w-[260px] h-auto"
           loading="eager"
+          :preload="{ fetchPriority: 'high' }"
         />
 
       </div>

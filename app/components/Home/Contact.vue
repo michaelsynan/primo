@@ -1,7 +1,7 @@
 <template>
 
   <div id="contact" class="grid md:grid-cols-2 grid-cols-1 gap-10 my-40 max-w-5xl">
-    <div ref="mapHost" class="flex justify-center items-center p-4 md:p-0">
+    <div class="flex justify-center items-center p-4 md:p-0">
       <LazyHomeContactMap v-if="mapVisible" class="!z-10" />
       <div
         v-else
@@ -26,25 +26,18 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
 
-const mapHost = ref(null)
 const mapVisible = ref(false)
-let mapObserver
+const showMapAfterScroll = () => {
+  if (window.scrollY >= window.innerHeight) {
+    mapVisible.value = true
+    window.removeEventListener('scroll', showMapAfterScroll)
+  }
+}
 
 onMounted(() => {
-  if (!('IntersectionObserver' in window)) {
-    mapVisible.value = true
-    return
-  }
-
-  mapObserver = new IntersectionObserver(([entry]) => {
-    if (entry.isIntersecting) {
-      mapVisible.value = true
-      mapObserver?.disconnect()
-    }
-  }, { rootMargin: '300px 0px' })
-
-  if (mapHost.value) mapObserver.observe(mapHost.value)
+  window.addEventListener('scroll', showMapAfterScroll, { passive: true })
+  showMapAfterScroll()
 })
 
-onUnmounted(() => mapObserver?.disconnect())
+onUnmounted(() => window.removeEventListener('scroll', showMapAfterScroll))
 </script>

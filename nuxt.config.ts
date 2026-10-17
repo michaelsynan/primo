@@ -136,6 +136,9 @@ export default defineNuxtConfig({
     registry: {
       googleAnalytics: {
         id: "G-5SYL9K88YTnp",
+        scriptOptions: {
+          trigger: "manual",
+        },
       },
       metaPixel: {
         id: "1409386597655675",
