@@ -109,3 +109,8 @@ li {
   font-weight: 700; /* Changed from 400 to 700 for bold */
   font-style: normal;
 }
+
+.blog-post-content :is(h1, h2, h3, h4, h5, h6) > a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
