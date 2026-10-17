@@ -65,7 +65,7 @@ const servicesData = [
 
     <div
       id="our-services"
-      :style="{ backgroundImage: 'url(/plumber.jpg)' }"
+      :style="{ backgroundImage: 'url(/plumber.webp)' }"
       class="border border-primoGrey w-full max-w-7xl mx-auto flex justify-center items-center h-[280px] md:h-[400px] bg-cover rounded relative"
     >
       <div class="overlay"></div>

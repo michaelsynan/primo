@@ -139,7 +139,16 @@ export default defineNuxtConfig({
       },
       metaPixel: {
         id: "1409386597655675",
+        scriptOptions: {
+          trigger: "manual",
+        },
       },
+    },
+  },
+
+  vite: {
+    build: {
+      cssCodeSplit: false,
     },
   },
 

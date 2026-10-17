@@ -63,7 +63,22 @@ useHead({
 // });
 
 const showNavbar = ref(true);
+const { $scripts } = useNuxtApp();
 let lastScrollTop = 0;
+let metaPixelTimer;
+let metaPixelLoaded = false;
+
+const loadMetaPixel = () => {
+  if (metaPixelLoaded) return;
+
+  metaPixelLoaded = true;
+  window.clearTimeout(metaPixelTimer);
+  window.removeEventListener('pointerdown', loadMetaPixel);
+  window.removeEventListener('keydown', loadMetaPixel);
+  window.removeEventListener('touchstart', loadMetaPixel);
+  window.removeEventListener('scroll', loadMetaPixel);
+  void $scripts.metaPixel.load();
+};
 
 const handleScroll = () => {
   const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -77,10 +92,20 @@ const handleScroll = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
+  window.addEventListener('pointerdown', loadMetaPixel, { once: true, passive: true });
+  window.addEventListener('keydown', loadMetaPixel, { once: true });
+  window.addEventListener('touchstart', loadMetaPixel, { once: true, passive: true });
+  window.addEventListener('scroll', loadMetaPixel, { once: true, passive: true });
+  metaPixelTimer = window.setTimeout(loadMetaPixel, 15000);
 });
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
+  window.clearTimeout(metaPixelTimer);
+  window.removeEventListener('pointerdown', loadMetaPixel);
+  window.removeEventListener('keydown', loadMetaPixel);
+  window.removeEventListener('touchstart', loadMetaPixel);
+  window.removeEventListener('scroll', loadMetaPixel);
 });
 </script>
 

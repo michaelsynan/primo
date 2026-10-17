@@ -32,6 +32,8 @@ const scrollToSection = async () => {
           src="/primo-logo-gold-2.png"
           alt="Primo Sewer Cleaning"
           width="240"
+          sizes="260px"
+          quality="80"
           class="w-full max-w-[260px] h-auto"
           loading="eager"
         />
