@@ -10,7 +10,7 @@ const reviewCount = ref(5)
 <template>
   <div class="flex gap-1 items-center">
     <a
-      href="https://www.google.com/search?q=Formwork+Studios&stick=H4sIAAAAAAAA_-NgU1I1qLCwTDZJSUtLMUoxMDYwNDG0MqgwtDBLsUgxNUhNNk1KMk0zXsQq4JZflFueX5StEFxSmpKZXwwANBtbCTwAAAA&hl=en&mat=Ccyhck5Wp436ElYBqiIDwhxM64kobhmFj4v7iXTUWkd3eDDwgVmkH6qHswra997kJbSx4VaIouIdKFnFP0IdiCFMD456s6mciBTTN5LfDXJ4-1scInNgINR1BRHqcaePAw&authuser=0"
+      href="https://share.google/E13L3PL3lCCtuW4i4"
       target="_blank"
       class="flex flex-col items-center gap-1  px-2 py-1 bg-opacity-50 rounded-lg"
     >

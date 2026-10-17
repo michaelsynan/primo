@@ -13,7 +13,7 @@ useSeoMeta({
 const img = useImage()
 
 const backgroundStyles = computed(() => {
-  const imgUrl = img('sump-pump-services.webp')
+  const imgUrl = img('sump-pump-kingston-scranton.jpg')
   return {
     backgroundImage: `url('${imgUrl}')`,
     backgroundRepeat: 'no-repeat',

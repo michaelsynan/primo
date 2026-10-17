@@ -4,7 +4,7 @@ export const services = [
     name: "Sump Pump Services",
     description:
       "Protect your basement from flooding with expert sump pump installation, repair, and replacement. We service primary and backup systems, diagnose failures fast, and help keep your pump ready for heavy rain and rising groundwater.",
-    image: "sump-pump-services.webp",
+    image: "sump-pump-kingston-scranton.jpg",
     details: {
       common_issues: [
         "Sump pump not turning on or cycling constantly",

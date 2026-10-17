@@ -1,8 +1,46 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { readdirSync } from "node:fs";
 import { serviceAreas } from "./app/data/locations";
 import { services } from "./app/data/services";
 
 const toIsoDate = (d: Date) => d.toISOString().split("T")[0];
+const serviceSlugs = services
+  .filter((service) => Boolean(service.slug))
+  .map((service) => service.slug);
+const blogPostRoutes = readdirSync(new URL("./content/posts/", import.meta.url), {
+  withFileTypes: true,
+})
+  .filter((file) => file.isFile() && /\.md$/i.test(file.name))
+  .map((file) => `/posts/${file.name.replace(/\.md$/i, "")}`);
+const serviceAreaRoutes = serviceAreas.flatMap((location) =>
+  serviceSlugs.map(
+    (serviceSlug) => `/service-area/${location.slug}/${serviceSlug}`,
+  ),
+);
+const mainRoutes = [
+  "/",
+  "/24-7-emergency-plumbing-sewer-services",
+  "/contact-a-plumber",
+  "/emergency",
+  "/legal",
+  "/plumbing-sewer-services",
+  "/posts",
+  "/privacy",
+  "/service-area",
+  "/terms-and-conditions",
+  "/luzerne-lackawanna-plumbing-sewer",
+  "/luzerne-lackawanna-plumbing-sewer/plumber",
+  "/luzerne-lackawanna-plumbing-sewer/services",
+];
+const mainServiceRoutes = serviceSlugs.map(
+  (serviceSlug) => `/luzerne-lackawanna-plumbing-sewer/${serviceSlug}`,
+);
+const prerenderRoutes = [
+  ...mainRoutes,
+  ...mainServiceRoutes,
+  ...serviceAreaRoutes,
+  ...blogPostRoutes,
+];
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -32,6 +70,14 @@ export default defineNuxtConfig({
   ],
 
   css: ["~/assets/css/main.css"],
+
+  // These content-driven marketing pages are stable between deployments, so
+  // prerender their HTML while keeping server routes such as /api/contact live.
+  nitro: {
+    prerender: {
+      routes: prerenderRoutes,
+    },
+  },
 
   // future: {
   //   compatibilityVersion: 4,
