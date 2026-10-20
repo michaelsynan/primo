@@ -59,6 +59,7 @@ const seoDescription = computed(
 const seoImage = computed(() => post.value?.image)
 
 const siteUrl = 'https://primosewercleaning.com'
+const fallbackOgImage = '/primo-og.jpg'
 
 const canonicalUrl = computed(() => new URL(postPath.value, siteUrl).toString())
 const seoImageAbsolute = computed(() => {
@@ -70,6 +71,7 @@ const seoImageAbsolute = computed(() => {
     return undefined
   }
 })
+const effectiveSeoImage = computed(() => seoImageAbsolute.value || new URL(fallbackOgImage, siteUrl).toString())
 
 const publishedTime = computed(() => {
   const date = post.value?.date
@@ -86,13 +88,14 @@ useSeoMeta({
   description: seoDescription,
   ogTitle: seoTitle,
   ogDescription: seoDescription,
+  ogImage: effectiveSeoImage,
+  ogImageAlt: seoTitle,
   ogType: 'article',
   ogUrl: canonicalUrl,
-  ogImage: seoImageAbsolute,
   twitterCard,
   twitterTitle: seoTitle,
   twitterDescription: seoDescription,
-  twitterImage: seoImageAbsolute,
+  twitterImage: effectiveSeoImage,
   articlePublishedTime: publishedTime,
 })
 
